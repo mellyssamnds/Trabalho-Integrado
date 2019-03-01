@@ -76,7 +76,11 @@ As etapas de desenvolvimento do projeto podem ser acompanhadas através do link:
 
 ### 6. MAPA MENTAL
 ### 7. CANVAS (PMC)
+<p align="center"><img src="https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/canvas.png"></p><br>
+
 ### 8. PROTÓTIPO DO SISTEMA
+O protótipo do sistema por ser visto através do link a seguir: [Protótipo do Sistema](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/prot%C3%B3tipo/Prot%C3%B3tipo.pdf)
+
 ### 9. DIAGRAMA DE CASO DE USO
 ### 10. DIAGRAMA DE CLASSES
 ### 11. DIAGRAMA DE SUBSISTEMAS
