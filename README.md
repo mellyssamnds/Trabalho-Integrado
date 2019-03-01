@@ -69,10 +69,10 @@ Após a análise dos dados obtidos, o sistema libera uma lista com “quadros”
 ser cumpridas para que ele evolua no seu projeto.
 
 ### 4. DIÁRIO DE BORDO
-As atividades desenvolvidas pelo grupo podem ser acompanhadas através do link: Diário de Bordo
+As atividades desenvolvidas pelo grupo podem ser acompanhadas através do link: [Diário de Bordo](https://docs.google.com/document/d/1C98fEnTXOouiWER455Rvhz5wbpx5Zy4iSblsz3gf3Fg/edit?usp=sharing)
 
 ### 5. KANBAN
-As etapas de desenvolvimento do projeto podem ser acompanhadas através do link: Quadro Trello
+As etapas de desenvolvimento do projeto podem ser acompanhadas através do link: [Quadro Trello](https://trello.com/b/gDRVC0iM/trabalho-integrado-201901)
 
 ### 6. MAPA MENTAL
 ### 7. CANVAS (PMC)
