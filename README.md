@@ -82,6 +82,7 @@ O protótipo do sistema por ser visto através do link a seguir: [Protótipo do 
 
 ### 8. DIAGRAMA DE CASO DE USO
 ### 9. DIAGRAMA DE CLASSES
+<p align="center"><img src="https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/Diagrama%20de%20Classe%20-%20Delphos.PNG"></p><br>
 ### 10. DIAGRAMA DE SUBSISTEMAS
 ### 11. MODELO CONCEITUAL
 ### 12. MODELO LÓGICO
