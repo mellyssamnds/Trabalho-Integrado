@@ -74,18 +74,17 @@ As atividades desenvolvidas pelo grupo podem ser acompanhadas através do link: 
 ### 5. KANBAN
 As etapas de desenvolvimento do projeto podem ser acompanhadas através do link: [Quadro Trello](https://trello.com/b/gDRVC0iM/trabalho-integrado-201901)
 
-### 6. MAPA MENTAL
-### 7. CANVAS (PMC)
+### 6. CANVAS (PMC)
 <p align="center"><img src="https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/canvas.png"></p><br>
 
-### 8. PROTÓTIPO DO SISTEMA
+### 7. PROTÓTIPO DO SISTEMA
 O protótipo do sistema por ser visto através do link a seguir: [Protótipo do Sistema](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/prot%C3%B3tipo/Prot%C3%B3tipo.pdf)
 
-### 9. DIAGRAMA DE CASO DE USO
-### 10. DIAGRAMA DE CLASSES
-### 11. DIAGRAMA DE SUBSISTEMAS
-### 12. MODELO CONCEITUAL
-### 13. MODELO LÓGICO
-### 14. DESCRIÇÃO DAS TECNOLOGIAS UTILIZADAS
+### 8. DIAGRAMA DE CASO DE USO
+### 9. DIAGRAMA DE CLASSES
+### 10. DIAGRAMA DE SUBSISTEMAS
+### 11. MODELO CONCEITUAL
+### 12. MODELO LÓGICO
+### 13. DESCRIÇÃO DAS TECNOLOGIAS UTILIZADAS
 
 
