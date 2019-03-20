@@ -60,7 +60,7 @@ ao tratamento psicológico, o aplicativo visa ajudar o usuário a criar o hábit
 ser um guia para aprender a gerir suas emoções e pensamentos. Contribuindo assim para mitigar, controlar e quem sabe ajudar
 o usuário a se curar, impedindo que esses transtornos venham a atrapalhar os usuários em outras esferas de sua vida.
 
-Inicialmente, no primeiro contato, é necessário coletar algumas informações sobre personalidade para conhecer melhor o usuário. 
+Inicialmente, é necessário coletar algumas informações sobre personalidade para conhecer melhor o usuário. 
 Assim, ele é submetido a um teste de personalidade e o diagnóstico revelado pelo teste é exibido para o usuário e armazenado em 
 um banco de dados. 
 
