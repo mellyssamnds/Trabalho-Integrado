@@ -1,14 +1,40 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Anne Caroline Silva
+ * 16/04/2019
  */
+
 package delphos;
 
-/**
- *
- * @author Jennifer
- */
-class Usuario {
-    
+public class Usuario {
+	
+	String nome;
+	String email;
+	String telefone;
+	
+	/* metodos setters e getters */
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	
+	public String getNome(){
+		return nome;
+	}
+	
+	public String getEmail(){
+		return email;
+	}
+	
+	public String getTelefone(){
+		return telefone;
+	}
+	
 }
