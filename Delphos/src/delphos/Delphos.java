@@ -16,6 +16,9 @@ public class Delphos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        DiretorTestePersonalidade criaTeste = new DiretorTestePersonalidade();
+        
+        TestePersonalidade teste1;
     }
     
 }
