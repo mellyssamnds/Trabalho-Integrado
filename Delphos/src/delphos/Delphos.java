@@ -25,6 +25,7 @@ public class Delphos {
 		HashMap<String, String> dicP = todasPerguntas.ListaPerguntas();
 		
 		/* teste que imprime todas as perguntas com seus respectivos IDs */
+		System.out.println("Teste que imprime IDs e Descrição da pergunta");
 		for(Map.Entry<String, String> entry : dicP.entrySet()) {
 			String key = entry.getKey();
 		    String value = entry.getValue();
