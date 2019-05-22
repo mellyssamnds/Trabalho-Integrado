@@ -3,14 +3,15 @@
  * 16/04/2019
  */
 
-package delphos;
+package dominio;
 
 public class Usuario {
 	
 	String nome;
-	String email;
+	String email; /*podemos usar como login*/
 	String telefone;
-	
+        String senha;
+    	
 	/* metodos setters e getters */
 	
 	public void setNome(String nome) {
@@ -24,6 +25,10 @@ public class Usuario {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+        
+        public void setSenha(String senha) {
+            this.senha = senha;
+        }
 	
 	public String getNome(){
 		return nome;
@@ -36,5 +41,11 @@ public class Usuario {
 	public String getTelefone(){
 		return telefone;
 	}
+        
+        public String getSenha() {
+        return senha;
+        }
+
+        
 	
 }

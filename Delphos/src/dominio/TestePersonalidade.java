@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package delphos;
+package dominio;
 
 import java.util.*;
 
@@ -50,15 +50,6 @@ public class TestePersonalidade {
     public void setPergunta(Pergunta pergunta) {
         this.pergunta = pergunta;
     }
-
-    public Resposta getResposta() {
-        return resposta;
-    }
-
-    public void setResposta(Resposta resposta) {
-        this.resposta = resposta;
-    }
-    
     
     
     public void calculaResultado(ArrayList<Resposta> respostas){

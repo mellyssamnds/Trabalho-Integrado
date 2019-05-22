@@ -3,7 +3,7 @@
  * 16/04/2019
  */
 
-package delphos;
+package dominio;
 
 import java.util.*;
 

@@ -3,7 +3,7 @@
  * 16/04/2019
  */
 
-package delphos;
+package dominio;
 
 public enum EnumNegativo {
 	VERYINACCURATE(5),

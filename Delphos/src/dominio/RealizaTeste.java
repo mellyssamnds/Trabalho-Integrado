@@ -3,7 +3,7 @@
  * 17/04/2019
  */
 
-package delphos;
+package dominio;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +22,7 @@ public class RealizaTeste {
 		Scanner ler = new Scanner(System.in);
 		
 		System.out.println("Vamos iniciar o teste de personalidade!!!");
-		System.out.println("Lembre-se que as respostas são dadas de acordo com o seguinte gabarito:\n"
+		System.out.println("Lembre-se que as respostas sï¿½o dadas de acordo com o seguinte gabarito:\n"
 							+ "1: Discordo totalmente\n"
 							+ "2: Discordo parcialmente\n"
 							+ "3: Neutro\n"
