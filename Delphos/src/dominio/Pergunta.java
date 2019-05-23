@@ -365,13 +365,13 @@ public class Pergunta {
 	public String getOPN10() {
 		return OPN10;
 	}
-	
-	
+        
+        
 	/* metodo get generico*/
 	public String getDescricao(String p) {
 		String desc = "";
 		if (p.equalsIgnoreCase("EXT1")) {
-			desc = getEXT1();
+			desc = EXT1;
 		}else if (p.equalsIgnoreCase("EXT2")){
 			desc = getEXT2();
 		}else if (p.equalsIgnoreCase("EXT3")){
@@ -474,36 +474,33 @@ public class Pergunta {
 		
 		return desc;
 	}
-    
+                
 	/* outros metodos da classe */
 	
-	public  HashMap<String, String> ListaPerguntas() {
-		
-		HashMap<String, String> listaPerguntas = new HashMap<String, String>();
-		
-		for (int i = 1; i <= 10; i++) {
-						
-			/* fator EXT */
-			String fatorEXT = "EXT" + i;
-			listaPerguntas.put(fatorEXT, getDescricao(fatorEXT));
-			
-			/* fator EST */
-			String fatorEST = "EST" + i;
-			listaPerguntas.put(fatorEST, getDescricao(fatorEST));
-			
-			/* fator AGR */
-			String fatorAGR = "AGR" + i;
-			listaPerguntas.put(fatorAGR, getDescricao(fatorAGR));
-			
-			/* fator CSN */
-			String fatorCSN = "CSN" + i;
-			listaPerguntas.put(fatorCSN, getDescricao(fatorCSN));
-			
-			/* fator OPN */
-			String fatorOPN = "OPN" + i;
-			listaPerguntas.put(fatorOPN, getDescricao(fatorOPN));
-		}
-		
-		return listaPerguntas;
-	}
+//	public  HashMap<String, String> listaPerguntas() {
+//						
+//		for (int i = 1; i <= 10; i++) {						
+//			/* fator EXT */
+//			String fatorEXT = "EXT" + i;
+//			listaPerguntas.put(fatorEXT, getDescricao(fatorEXT));
+//			
+//			/* fator EST */
+//			String fatorEST = "EST" + i;
+//			listaPerguntas.put(fatorEST, getDescricao(fatorEST));
+//			
+//			/* fator AGR */
+//			String fatorAGR = "AGR" + i;
+//			listaPerguntas.put(fatorAGR, getDescricao(fatorAGR));
+//			
+//			/* fator CSN */
+//			String fatorCSN = "CSN" + i;
+//			listaPerguntas.put(fatorCSN, getDescricao(fatorCSN));
+//			
+//			/* fator OPN */
+//			String fatorOPN = "OPN" + i;
+//			listaPerguntas.put(fatorOPN, getDescricao(fatorOPN));
+//		}
+//		
+//		return listaPerguntas;
+//	}
 }

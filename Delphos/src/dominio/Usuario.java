@@ -5,12 +5,16 @@
 
 package dominio;
 
+import java.util.Date;
+import java.util.Scanner;
+
 public class Usuario {
 	
 	String nome;
 	String email; /*podemos usar como login*/
-	String telefone;
+        String cpf;
         String senha;
+        Date DataNascimento;
     	
 	/* metodos setters e getters */
 	
@@ -22,15 +26,13 @@ public class Usuario {
 		this.email = email;
 	}
 	
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
         
         public void setSenha(String senha) {
             this.senha = senha;
         }
 	
-	public String getNome(){
+	public String getNome(){	
+
 		return nome;
 	}
 	
@@ -38,14 +40,28 @@ public class Usuario {
 		return email;
 	}
 	
-	public String getTelefone(){
-		return telefone;
-	}
-        
+	
         public String getSenha() {
         return senha;
         }
 
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Date getDataNascimento() {
+        return DataNascimento;
+    }
+
+    public void setDataNascimento(Date DataNascimento) {
+        this.DataNascimento = DataNascimento;
+    }
+
+    
         
 	
 }
