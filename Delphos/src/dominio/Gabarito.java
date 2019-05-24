@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class RealizaTeste {
+public class Gabarito {
 	
 	/* metodo para realizar o teste personalidade */
 	public HashMap<String, Integer> realizaTeste(HashMap<String, String> dicP) {
