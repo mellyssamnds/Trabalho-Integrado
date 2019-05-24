@@ -1,6 +1,6 @@
 /*
  * Anne Caroline Silva
- * 16/04/2019
+ *
  */
 
 package dominio;
@@ -214,156 +214,19 @@ public class Pergunta {
 	}
 	
 
-	/* metodos getters */
-	public String getEXT1() {
-		return EXT1;
+	public Pergunta() {
+		this.listaPerguntas();
 	}
-	public String getEXT2() {
-		return EXT2;
+	
+	@SuppressWarnings("unchecked")
+	public List<String> getListaKeys() {
+		return (List<String>) listaPerguntas().keySet();
 	}
-	public String getEXT3() {
-		return EXT3;
-	}
-	public String getEXT4() {
-		return EXT4;
-	}
-	public String getEXT5() {
-		return EXT5;
-	}
-	public String getEXT6() {
-		return EXT6;
-	}
-	public String getEXT7() {
-		return EXT7;
-	}
-	public String getEXT8() {
-		return EXT8;
-	}
-	public String getEXT9() {
-		return EXT9;
-	}
-	public String getEXT10() {
-		return EXT10;
-	}
-	public String getEST1() {
-		return EST1;
-	}
-	public String getEST2() {
-		return EST2;
-	}
-	public String getEST3() {
-		return EST3;
-	}
-	public String getEST4() {
-		return EST4;
-	}
-	public String getEST5() {
-		return EST5;
-	}
-	public String getEST6() {
-		return EST6;
-	}
-	public String getEST7() {
-		return EST7;
-	}
-	public String getEST8() {
-		return EST8;
-	}
-	public String getEST9() {
-		return EST9;
-	}
-	public String getEST10() {
-		return EST10;
-	}
-	public String getAGR1() {
-		return AGR1;
-	}
-	public String getAGR2() {
-		return AGR2;
-	}
-	public String getAGR3() {
-		return AGR3;
-	}
-	public String getAGR4() {
-		return AGR4;
-	}
-	public String getAGR5() {
-		return AGR5;
-	}
-	public String getAGR6() {
-		return AGR6;
-	}
-	public String getAGR7() {
-		return AGR7;
-	}
-	public String getAGR8() {
-		return AGR8;
-	}
-	public String getAGR9() {
-		return AGR9;
-	}
-	public String getAGR10() {
-		return AGR10;
-	}
-	public String getCSN1() {
-		return CSN1;
-	}
-	public String getCSN2() {
-		return CSN2;
-	}
-	public String getCSN3() {
-		return CSN3;
-	}
-	public String getCSN4() {
-		return CSN4;
-	}
-	public String getCSN5() {
-		return CSN5;
-	}
-	public String getCSN6() {
-		return CSN6;
-	}
-	public String getCSN7() {
-		return CSN7;
-	}
-	public String getCSN8() {
-		return CSN8;
-	}
-	public String getCSN9() {
-		return CSN9;
-	}
-	public String getCSN10() {
-		return CSN10;
-	}
-	public String getOPN1() {
-		return OPN1;
-	}
-	public String getOPN2() {
-		return OPN2;
-	}
-	public String getOPN3() {
-		return OPN3;
-	}
-	public String getOPN4() {
-		return OPN4;
-	}
-	public String getOPN5() {
-		return OPN5;
-	}
-	public String getOPN6() {
-		return OPN6;
-	}
-	public String getOPN7() {
-		return OPN7;
-	}
-	public String getOPN8() {
-		return OPN8;
-	}
-	public String getOPN9() {
-		return OPN9;
-	}
-	public String getOPN10() {
-		return OPN10;
+	
+	public String getTextoPergunta(String key) {
+		HashMap<String, String> listaPerguntas  = new HashMap<String,String>();
+		String texto = listaPerguntas.get(key);
+		return texto;
 	}
         
         
@@ -373,103 +236,103 @@ public class Pergunta {
 		if (p.equalsIgnoreCase("EXT1")) {
 			desc = EXT1;
 		}else if (p.equalsIgnoreCase("EXT2")){
-			desc = getEXT2();
+			desc = EXT2;
 		}else if (p.equalsIgnoreCase("EXT3")){
-			desc = getEXT3();
+			desc = EXT3;
 		}else if (p.equalsIgnoreCase("EXT4")){
-			desc = getEXT4();
+			desc = EXT4;
 		}else if (p.equalsIgnoreCase("EXT5")){
-			desc = getEXT5();
+			desc = EXT5;
 		}else if (p.equalsIgnoreCase("EXT6")){
-			desc = getEXT6();
+			desc = EXT6;
 		}else if (p.equalsIgnoreCase("EXT7")){
-			desc = getEXT7();
+			desc = EXT7;
 		}else if (p.equalsIgnoreCase("EXT8")){
-			desc = getEXT8();
+			desc = EXT8;
 		}else if (p.equalsIgnoreCase("EXT9")){
-			desc = getEXT9();
+			desc = EXT9;
 		}else if (p.equalsIgnoreCase("EXT10")){
-			desc = getEXT10();
+			desc = EXT10;
 		}else if (p.equalsIgnoreCase("EST1")){
-			desc = getEST1();
+			desc = EST1;
 		}else if (p.equalsIgnoreCase("EST2")){
-			desc = getEST2();
+			desc = EST2;
 		}else if (p.equalsIgnoreCase("EST3")){
-			desc = getEST3();
+			desc = EST3;
 		}else if (p.equalsIgnoreCase("EST4")){
-			desc = getEST4();
+			desc = EST4;
 		}else if (p.equalsIgnoreCase("EST5")){
-			desc = getEST5();
+			desc = EST5;
 		}else if (p.equalsIgnoreCase("EST6")){
-			desc = getEST6();
+			desc = EST6;
 		}else if (p.equalsIgnoreCase("EST7")){
-			desc = getEST7();
+			desc = EST7;
 		}else if (p.equalsIgnoreCase("EST8")){
-			desc = getEST8();
+			desc = EST8;
 		}else if (p.equalsIgnoreCase("EST9")){
-			desc = getEST9();
+			desc = EST9;
 		}else if (p.equalsIgnoreCase("EST10")){
-			desc = getEST10();
+			desc = EST10;
 		}else if (p.equalsIgnoreCase("AGR1")){
-			desc = getAGR1();
+			desc = AGR1;
 		}else if (p.equalsIgnoreCase("AGR2")){
-			desc = getAGR2();
+			desc = AGR2;
 		}else if (p.equalsIgnoreCase("AGR3")){
-			desc = getAGR3();
+			desc = AGR3;
 		}else if (p.equalsIgnoreCase("AGR4")){
-			desc = getAGR4();
+			desc = AGR4;
 		}else if (p.equalsIgnoreCase("AGR5")){
-			desc = getAGR5();
+			desc = AGR5;
 		}else if (p.equalsIgnoreCase("AGR6")){
-			desc = getAGR6();
+			desc = AGR6;
 		}else if (p.equalsIgnoreCase("AGR7")){
-			desc = getAGR7();
+			desc = AGR7;
 		}else if (p.equalsIgnoreCase("AGR8")){
-			desc = getAGR8();
+			desc = AGR8;
 		}else if (p.equalsIgnoreCase("AGR9")){
-			desc = getAGR9();
+			desc = AGR9;
 		}else if (p.equalsIgnoreCase("AGR10")){
-			desc = getAGR10();
+			desc = AGR10;
 		}else if (p.equalsIgnoreCase("CSN1")){
-			desc = getCSN1();
+			desc = CSN1;
 		}else if (p.equalsIgnoreCase("CSN2")){
-			desc = getCSN2();
+			desc = CSN2;
 		}else if (p.equalsIgnoreCase("CSN3")){
-			desc = getCSN3();
+			desc = CSN3;
 		}else if (p.equalsIgnoreCase("CSN4")){
-			desc = getCSN4();
+			desc = CSN4;
 		}else if (p.equalsIgnoreCase("CSN5")){
-			desc = getCSN5();
+			desc = CSN5;
 		}else if (p.equalsIgnoreCase("CSN6")){
-			desc = getCSN6();
+			desc = CSN6;
 		}else if (p.equalsIgnoreCase("CSN7")){
-			desc = getCSN7();
+			desc = CSN7;
 		}else if (p.equalsIgnoreCase("CSN8")){
-			desc = getCSN8();
+			desc = CSN8;
 		}else if (p.equalsIgnoreCase("CSN9")){
-			desc = getCSN9();
+			desc = CSN9;
 		}else if (p.equalsIgnoreCase("CSN10")){
-			desc = getCSN10();
+			desc = CSN10;
 		}else if (p.equalsIgnoreCase("OPN1")){
-			desc = getOPN1();
+			desc = OPN1;
 		}else if (p.equalsIgnoreCase("OPN2")){
-			desc = getOPN2();
+			desc = OPN2;
 		}else if (p.equalsIgnoreCase("OPN3")){
-			desc = getOPN3();
+			desc = OPN3;
 		}else if (p.equalsIgnoreCase("OPN4")){
-			desc = getOPN4();
+			desc = OPN4;
 		}else if (p.equalsIgnoreCase("OPN5")){
-			desc = getOPN5();
+			desc = OPN5;
 		}else if (p.equalsIgnoreCase("OPN6")){
-			desc = getOPN6();
+			desc = OPN6;
 		}else if (p.equalsIgnoreCase("OPN7")){
-			desc = getOPN7();
+			desc = OPN7;
 		}else if (p.equalsIgnoreCase("OPN8")){
-			desc = getOPN8();
+			desc = OPN8;
 		}else if (p.equalsIgnoreCase("OPN9")){
-			desc = getOPN9();
+			desc = OPN9;
 		}else{
-			desc = getOPN10();
+			desc = OPN10;
 		}
 		
 		return desc;
@@ -477,30 +340,33 @@ public class Pergunta {
                 
 	/* outros metodos da classe */
 	
-//	public  HashMap<String, String> listaPerguntas() {
-//						
-//		for (int i = 1; i <= 10; i++) {						
-//			/* fator EXT */
-//			String fatorEXT = "EXT" + i;
-//			listaPerguntas.put(fatorEXT, getDescricao(fatorEXT));
-//			
-//			/* fator EST */
-//			String fatorEST = "EST" + i;
-//			listaPerguntas.put(fatorEST, getDescricao(fatorEST));
-//			
-//			/* fator AGR */
-//			String fatorAGR = "AGR" + i;
-//			listaPerguntas.put(fatorAGR, getDescricao(fatorAGR));
-//			
-//			/* fator CSN */
-//			String fatorCSN = "CSN" + i;
-//			listaPerguntas.put(fatorCSN, getDescricao(fatorCSN));
-//			
-//			/* fator OPN */
-//			String fatorOPN = "OPN" + i;
-//			listaPerguntas.put(fatorOPN, getDescricao(fatorOPN));
-//		}
-//		
-//		return listaPerguntas;
-//	}
+	public  HashMap<String, String> listaPerguntas() {
+						
+		HashMap<String, String> listaPerg = new HashMap<String, String>();
+		
+		for (int i = 1; i <= 10; i++) {						
+			
+			/* fator EXT */
+			String fatorEXT = "EXT" + i;
+			listaPerg.put(fatorEXT, getDescricao(fatorEXT));
+			
+			/* fator EST */
+			String fatorEST = "EST" + i;
+			listaPerg.put(fatorEST, getDescricao(fatorEST));
+			
+			/* fator AGR */
+			String fatorAGR = "AGR" + i;
+			listaPerg.put(fatorAGR, getDescricao(fatorAGR));
+			
+			/* fator CSN */
+			String fatorCSN = "CSN" + i;
+			listaPerg.put(fatorCSN, getDescricao(fatorCSN));
+			
+			/* fator OPN */
+			String fatorOPN = "OPN" + i;
+			listaPerg.put(fatorOPN, getDescricao(fatorOPN));
+		}
+		
+		return listaPerg;
+	}
 }

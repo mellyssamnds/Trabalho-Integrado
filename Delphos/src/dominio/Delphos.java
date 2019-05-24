@@ -25,10 +25,10 @@ public class Delphos {
         /* inicializa as perguntas */
 		//Pergunta todasPerguntas = new Pergunta();
 		/* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
-		//HashMap<String, String> dicP = todasPerguntas.ListaPerguntas();
+		//HashMap<String, String> dicP = todasPerguntas.listaPerguntas();
 		
 		/* teste que imprime todas as perguntas com seus respectivos IDs
-		System.out.println("Teste que imprime IDs e Descri��o da pergunta");
+		System.out.println("Teste que imprime IDs e Descricao da pergunta");
 		for(Map.Entry<String, String> entry : dicP.entrySet()) {
 			String key = entry.getKey();
 		    String value = entry.getValue();
