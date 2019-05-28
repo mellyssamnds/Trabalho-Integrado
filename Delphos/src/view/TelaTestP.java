@@ -1,17 +1,33 @@
 /*
- * Anne Caroline Silva
- * 17/04/2019
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+package view;
 
-package dominio;
-
+import dominio.TestePersonalidade;
+import dominio.Usuario;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Gabarito {
-	
-	/* metodo para realizar o teste personalidade */
+/**
+ *
+ * @author Jennifer
+ */
+public class TelaTestP {
+    
+    private Usuario usuario;
+    private TestePersonalidade test;
+    
+    public TelaTestP(Usuario usario, TestePersonalidade teste){
+        this.usuario = usuario;
+        this.test = teste;                
+    }
+    
+    
+    /* metodo para realizar o teste personalidade */
 	public HashMap<String, Integer> realizaTeste(HashMap<String, String> dicP) {
 		
 		/* cria um dicionario para guardar as respostas dadas na realizacao do teste */
@@ -44,5 +60,17 @@ public class Gabarito {
 		
 		return listaRespostas;
 	}
-
-}
+//    public void iniciaTeste(){    
+//        
+//        List<String> perguntas = test.getPergunta().getListaKeys();                
+//        for(String key: perguntas){        
+//            System.out.println(test.getPergunta().getTextoPergunta(key));
+//            Scanner ler = new Scanner(System.in);
+//            String resposta = (ler.nextLine());
+//            
+//            
+//        }
+        
+    }
+    
+        

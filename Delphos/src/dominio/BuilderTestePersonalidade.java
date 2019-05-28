@@ -5,10 +5,14 @@
  */
 package dominio;
 
+import java.sql.SQLException;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Scanner;
+import view.ControleTela;
 
 /**
  *
@@ -32,27 +36,32 @@ public class BuilderTestePersonalidade{
     public void preencheRespostas(){
     
         /*recebe a lista de resposta e persiste no banco de dados */
+        //HashMap<String, Integer> dicR = c.realizaTeste(dicP);        
+	//TestePersonalidade testeP = new TestePersonalidade(usuario);
+        //testeP.calculaResultado(dicR);
+        //System.out.println(testeP.exibeResultadoStr());          
     }
     
     /*registra hora e data da realização do teste*/
     public void registraData(){
-        
-         
         Date date = new Date(); 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         dateFormat.format(date);/*persistir esse formato no banco*/
     
     }
     
-    public void QualUsuario(){
-        
-        /*o usuario já está persistido no banco*/
-        /*esse metodo faz a busca do usuario passado como parametro no banco*/
+    public void CriaUsuario() throws ParseException, SQLException, ClassNotFoundException{
+        /*chama o cadastro*/
+        ControleTela c = new ControleTela();
+        this.usuario = c.leDadosUsuario();
         
     }
     
     public void ResgataPerguntas(){
-        /*utilização do padrão peso mosca para resgatar as pergundas no banco e exibi-las*/ 
+        /* inicializa as perguntas */
+        Pergunta todasPerguntas = new Pergunta();
+        /* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
+	HashMap<String, String> dicP = todasPerguntas.listaPerguntas();
     }
     
     

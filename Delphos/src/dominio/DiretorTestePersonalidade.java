@@ -23,7 +23,7 @@ public class DiretorTestePersonalidade {
         
         builderTestePersonalidade.ResgataPerguntas();
         //cadastra o cliente
-        builderTestePersonalidade.QualUsuario();
+        builderTestePersonalidade.CriaUsuario();
         //registra data do teste
         builderTestePersonalidade.registraData();
         //preenche as respostas do usuario

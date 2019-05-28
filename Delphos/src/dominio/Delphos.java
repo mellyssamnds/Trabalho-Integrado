@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
-import view.VisaoUsuario;
+import view.ControleTela;
 
 /**
  *
@@ -21,33 +21,32 @@ public class Delphos {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ParseException, SQLException, ClassNotFoundException {
-        
-        /* inicializa as perguntas */
-		//Pergunta todasPerguntas = new Pergunta();
-		/* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
-		//HashMap<String, String> dicP = todasPerguntas.listaPerguntas();
 		
-		/* teste que imprime todas as perguntas com seus respectivos IDs
-		System.out.println("Teste que imprime IDs e Descricao da pergunta");
-		for(Map.Entry<String, String> entry : dicP.entrySet()) {
-			String key = entry.getKey();
-		    String value = entry.getValue();
-			System.out.println(key + "  " + value);
-		}*/
-    	
-		/* Op��o do Menu: Realiza teste */
-		//RealizaTeste novoTeste = new RealizaTeste();
-		//HashMap<String, Integer> dicR = novoTeste.realizaTeste(dicP);
+//                /*chama o cadastro*/
+//                Usuario usuario;
+//                ControleTela c = new ControleTela();
+//                usuario = c.leDadosUsuario();
+//                
+//		/* inicializa as perguntas */
+//		Pergunta todasPerguntas = new Pergunta();
+//		/* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
+//		HashMap<String, String> dicP = todasPerguntas.listaPerguntas();
+//                
+//                HashMap<String, Integer> dicR = c.realizaTeste(dicP);
+//                
+//                TestePersonalidade testeP = new TestePersonalidade(usuario);
+//                testeP.calculaResultado(dicR);
+//                System.out.println(testeP.exibeResultadoStr()); 
+                
+                
+
+		 //teste que imprime todas as respostas com seus respectivos IDs 
+//		for(Map.Entry<String, Integer> entry : dicR.entrySet()) {
+//		String key = entry.getKey();
+//		    Integer value = entry.getValue();
+//			System.out.println(key + "  " + value);
+//		}
 		
-		/* teste que imprime todas as respostas com seus respectivos IDs 
-		for(Map.Entry<String, In		
-teger> entry : dicR.entrySet()) {
-			String key = entry.getKey();
-		    Integer value = entry.getValue();
-			System.out.println(key + "  " + value);
-		}*/
-		
-                VisaoUsuario v = new VisaoUsuario();
-                v.mensagemInicial();
+                
     }
 }

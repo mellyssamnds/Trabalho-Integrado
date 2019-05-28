@@ -14,20 +14,21 @@ import java.util.*;
  */
 public class TestePersonalidade extends IdGeneratorSingleton {
 	
-	private IdGeneratorSingleton idTeste = IdGeneratorSingleton.getInstance();
+    private IdGeneratorSingleton idTeste = IdGeneratorSingleton.getInstance();
     private Date dataHora;
     private Usuario usuario;
-    private Gabarito gabarito;
+    private HashMap<String, Integer> listaResultado;
+    //private Gabarito gabarito;
     
 
     /* metodos setters e getters */
     
-    public TestePersonalidade(IdGeneratorSingleton idTeste, Date dataHora, Usuario usuario, Gabarito gabarito){
-    	this.idTeste = idTeste;
-        this.dataHora = dataHora;
-        this.usuario = usuario;
-        this.gabarito = gabarito;
-    }
+//    public TestePersonalidade(Usuario usuario){
+//    	//this.idTeste = idTeste;
+//        //this.dataHora = dataHora;
+//        this.usuario = usuario;
+//        this.listaResultado = new HashMap<String, Integer>() ;
+//    }
     
     public IdGeneratorSingleton getIdTeste() {
         return idTeste;
@@ -40,17 +41,9 @@ public class TestePersonalidade extends IdGeneratorSingleton {
     public Usuario getUsuario() {
         return usuario;
     }
-    
-    public Gabarito getGabarito() {
-        return gabarito;
-    }
 
-        
-    
-    @SuppressWarnings("unchecked")
-	public static HashMap<String, Integer> calculaResultado(Gabarito gab) {
-    	
-    	HashMap<String, Integer> listaResultado = new HashMap<String, Integer>();
+ 
+	public HashMap<String, Integer> calculaResultado(HashMap<String, Integer> listaRespostas) {
     	
     	int notaEXT = 20;
     	int notaEST = 38;
@@ -59,7 +52,7 @@ public class TestePersonalidade extends IdGeneratorSingleton {
     	int notaOPN = 8;
     	
     	
-    	for(Map.Entry<String, Integer> entry : ((Map<String, Integer>) gab).entrySet()) {
+    	for(Map.Entry<String, Integer> entry : listaRespostas.entrySet()) {
     		if(entry.getKey().equalsIgnoreCase("EXT1")) {
     			notaEXT += entry.getValue();
     		} else if(entry.getKey().equalsIgnoreCase("EXT2")) {
@@ -164,13 +157,18 @@ public class TestePersonalidade extends IdGeneratorSingleton {
     		
     	}
     	
-    	listaResultado.put("NotaEXT", notaEXT);
-    	listaResultado.put("NotaEST", notaEST);
-    	listaResultado.put("NotaAGR", notaAGR);
-    	listaResultado.put("NotaCSN", notaCSN);
-    	listaResultado.put("NotaOPN", notaOPN);
+    	this.listaResultado.put("NotaEXT", notaEXT);
+    	this.listaResultado.put("NotaEST", notaEST);
+    	this.listaResultado.put("NotaAGR", notaAGR);
+    	this.listaResultado.put("NotaCSN", notaCSN);
+    	this.listaResultado.put("NotaOPN", notaOPN);
     	
-		return listaResultado;
-    }   
-    
+	return this.listaResultado;
+    }
+        
+        
+    public String exibeResultadoStr(){
+        
+        return this.listaResultado.toString();
+    }
 }
