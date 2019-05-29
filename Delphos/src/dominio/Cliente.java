@@ -8,7 +8,7 @@ package dominio;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Usuario {
+public class Cliente {
 	
 	String nome;
 	String email; /*podemos usar como login*/

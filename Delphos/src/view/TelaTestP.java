@@ -6,7 +6,7 @@
 package view;
 
 import dominio.TestePersonalidade;
-import dominio.Usuario;
+import dominio.Cliente;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,10 +18,10 @@ import java.util.Scanner;
  */
 public class TelaTestP {
     
-    private Usuario usuario;
+    private Cliente usuario;
     private TestePersonalidade test;
     
-    public TelaTestP(Usuario usario, TestePersonalidade teste){
+    public TelaTestP(Cliente usario, TestePersonalidade teste){
         this.usuario = usuario;
         this.test = teste;                
     }

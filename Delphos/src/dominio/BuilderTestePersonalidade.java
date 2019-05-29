@@ -6,12 +6,9 @@
 package dominio;
 
 import java.sql.SQLException;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Scanner;
 import view.ControleTela;
 
 /**
@@ -19,51 +16,47 @@ import view.ControleTela;
  * @author Jennifer
  */
 public class BuilderTestePersonalidade{
-    private Usuario usuario;
-    private Pergunta pergunta;
-    private Resposta resposta;
-    //private TestePersonalidade teste;
+    private Cliente cliente;
+    private HashMap<String, Integer> respostas;
+    private HashMap<String,String> perguntas;
+    private Date dataHora;
     
-    public BuilderTestePersonalidade(Usuario usuario, Pergunta pergunta, Resposta resposta){
-        this.usuario = usuario;
-        this.pergunta = pergunta;
-        this.resposta = resposta;
+    
+    public BuilderTestePersonalidade(Cliente usuario, HashMap<String, String> perguntas, HashMap<String,Integer> respostas){
+        this.cliente = cliente;
+        this.perguntas = perguntas;
+        this.respostas = respostas;
         
     }
     
     /*tarefas*/
     
-    public void preencheRespostas(){
-    
-        /*recebe a lista de resposta e persiste no banco de dados */
-        //HashMap<String, Integer> dicR = c.realizaTeste(dicP);        
-	//TestePersonalidade testeP = new TestePersonalidade(usuario);
-        //testeP.calculaResultado(dicR);
-        //System.out.println(testeP.exibeResultadoStr());          
+    public HashMap<String,Integer> preencheRespostas(HashMap<String, String> perguntas){
+        ControleTela tela = new ControleTela();
+        this.respostas = tela.realizaTeste(perguntas);
+        
+        return this.respostas;
     }
     
     /*registra hora e data da realização do teste*/
     public void registraData(){
-        Date date = new Date(); 
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        dateFormat.format(date);/*persistir esse formato no banco*/
-    
+        Date date = new Date();
+        this.dataHora = date;
+        //DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        //this.dateFormat.format(date);
     }
     
-    public void CriaUsuario() throws ParseException, SQLException, ClassNotFoundException{
+    public void VerificaUsuario() throws ParseException, SQLException, ClassNotFoundException{
         /*chama o cadastro*/
-        ControleTela c = new ControleTela();
-        this.usuario = c.leDadosUsuario();
+        
         
     }
     
-    public void ResgataPerguntas(){
-        /* inicializa as perguntas */
-        Pergunta todasPerguntas = new Pergunta();
-        /* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
-	HashMap<String, String> dicP = todasPerguntas.listaPerguntas();
+    //adiciona todos os atributos preenchidos em teste e guarda os valores no banco
+    public TestePersonalidade montarTestePersonalidade(TestePersonalidade testeP){
+        testeP = new TestePersonalidade(this.cliente,this.respostas,this.dataHora);
+        return testeP;
+        
     }
-    
-    
     
 }

@@ -16,30 +16,34 @@ public class TestePersonalidade extends IdGeneratorSingleton {
 	
     private IdGeneratorSingleton idTeste = IdGeneratorSingleton.getInstance();
     private Date dataHora;
-    private Usuario usuario;
-    private HashMap<String, Integer> listaResultado;
-    //private Gabarito gabarito;
+    private Cliente cliente;
+    private HashMap<String, Integer> listaRespostas;
+    private HashMap<String, Integer> listaResultado = new HashMap<>();
     
 
     /* metodos setters e getters */
     
-//    public TestePersonalidade(Usuario usuario){
-//    	//this.idTeste = idTeste;
-//        //this.dataHora = dataHora;
-//        this.usuario = usuario;
-//        this.listaResultado = new HashMap<String, Integer>() ;
-//    }
+    public TestePersonalidade(Cliente cliente, HashMap<String,Integer> listaRespostas, Date dataHora){
+    	//this.idTeste = idTeste;
+        this.dataHora = dataHora;
+        this.cliente = cliente;
+        this.listaRespostas = listaRespostas;
+    }
     
     public IdGeneratorSingleton getIdTeste() {
-        return idTeste;
+        return this.idTeste;
     }
     
     public Date getDataHora() {
-        return dataHora;
+        return this.dataHora;
     }
     
-    public Usuario getUsuario() {
-        return usuario;
+    public Cliente getCliente() {
+        return this.cliente;
+    }
+    
+    public HashMap<String, Integer> getListaRespostas(){
+        return this.listaRespostas;
     }
 
  
@@ -170,5 +174,10 @@ public class TestePersonalidade extends IdGeneratorSingleton {
     public String exibeResultadoStr(){
         
         return this.listaResultado.toString();
+    }
+    
+    public String exibeRespostasStr(){
+        
+        return this.listaRespostas.toString();
     }
 }

@@ -25,23 +25,23 @@ public abstract class TestePersonalidadeDAOImpl extends Conector implements Gene
             +"?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
     
     //recebo um arrayList<String>
-    public boolean insert(G obj) throws SQLException, ClassNotFoundException {
-        boolean stat = false;
-        try (Connection connection = this.openConnection();
-                PreparedStatement statement = connection.prepareStatement(INSERT);) {
-            HashMap<String, Integer> resultado = obj;
-            for(int i = 1; i <= resultado.size(); i++){
-                
-                //statement.setDate(1,resultado.get(i));
-                //statement.setString(i, ((String) obj).get(i));
-        
-            }
-
-            stat = statement.execute(); 
-        } finally {
-            this.closeConnection(con);
-        }
-        return stat;
-    }
+//    public boolean insert(G obj) throws SQLException, ClassNotFoundException {
+//        boolean stat = false;
+//        try (Connection connection = this.openConnection();
+//                PreparedStatement statement = connection.prepareStatement(INSERT);) {
+//            HashMap<String, Integer> resultado = obj;
+//            for(int i = 1; i <= resultado.size(); i++){
+//                
+//                //statement.setDate(1,resultado.get(i));
+//                //statement.setString(i, ((String) obj).get(i));
+//        
+//            }
+//
+//            stat = statement.execute(); 
+//        } finally {
+//            this.closeConnection(con);
+//        }
+//        return stat;
+//    }
            
 }

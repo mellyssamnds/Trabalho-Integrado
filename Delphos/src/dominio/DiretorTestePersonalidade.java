@@ -5,6 +5,8 @@
  */
 package dominio;
 
+import java.util.HashMap;
+
 /**
  *
  * @author Jennifer
@@ -14,20 +16,22 @@ public class DiretorTestePersonalidade {
     public DiretorTestePersonalidade(){
     }
     
-    public TestePersonalidade builder(Usuario usuario, Pergunta pergunta, Resposta resposta) throws Exception{
+    public TestePersonalidade builder(Cliente cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas) throws Exception{
         
-        TestePersonalidade testeP = new TestePersonalidade();
-        BuilderTestePersonalidade builderTestePersonalidade = new BuilderTestePersonalidade(usuario,pergunta,resposta);
+        TestePersonalidade testeP = null; //estava reclamando que precisava ser inicializado
+        BuilderTestePersonalidade builder = new BuilderTestePersonalidade(cliente,perguntas,respostas);
         
         /*adicionar a sequência de tarefas*/
         
-        builderTestePersonalidade.ResgataPerguntas();
-        //cadastra o cliente
-        builderTestePersonalidade.CriaUsuario();
+         //verifica se o cliente é cadastrado ou não
+        builder.VerificaUsuario();
+        //preenche as respostas do cliente
+        builder.preencheRespostas(perguntas);
         //registra data do teste
-        builderTestePersonalidade.registraData();
-        //preenche as respostas do usuario
-        builderTestePersonalidade.preencheRespostas();
+        builder.registraData();
+        //Preenche o objeto teste com os dados retornados pelos métodos anteriores
+        builder.montarTestePersonalidade(testeP);
+        
         
         
         return testeP;

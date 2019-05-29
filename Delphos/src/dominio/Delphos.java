@@ -8,7 +8,6 @@ package dominio;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.HashMap;
-import java.util.Map;
 import view.ControleTela;
 
 /**
@@ -20,32 +19,40 @@ public class Delphos {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws ParseException, SQLException, ClassNotFoundException {
+    public static void main(String[] args) throws ParseException, SQLException, ClassNotFoundException, Exception {
 		
-//                /*chama o cadastro*/
-//                Usuario usuario;
-//                ControleTela c = new ControleTela();
-//                usuario = c.leDadosUsuario();
-//                
-//		/* inicializa as perguntas */
-//		Pergunta todasPerguntas = new Pergunta();
-//		/* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
-//		HashMap<String, String> dicP = todasPerguntas.listaPerguntas();
-//                
-//                HashMap<String, Integer> dicR = c.realizaTeste(dicP);
-//                
-//                TestePersonalidade testeP = new TestePersonalidade(usuario);
-//                testeP.calculaResultado(dicR);
-//                System.out.println(testeP.exibeResultadoStr()); 
+                /*chama o cadastro*/
+                Cliente cliente;
+                ControleTela c = new ControleTela();
+                cliente = c.leDadosUsuario();
+                
+                /* inicializa as perguntas */
+		Pergunta todasPerguntas = new Pergunta();
+		/* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
+		HashMap<String, String> perguntas = todasPerguntas.listarPerguntas();
+               
+                /* cria um dicionario para armazenar as respostas */
+                HashMap<String, Integer> respostas = new HashMap<>(); 
+                
+                DiretorTestePersonalidade CriaTesteP = new DiretorTestePersonalidade();
+                TestePersonalidade testeP = CriaTesteP.builder(cliente, perguntas, respostas);
+                
+               System.out.println(testeP.exibeResultadoStr()); 
                 
                 
-
 		 //teste que imprime todas as respostas com seus respectivos IDs 
-//		for(Map.Entry<String, Integer> entry : dicR.entrySet()) {
+//		for(Map.Entry<String, Integer> entry : testeP.getListaRespostas().entrySet()) {
 //		String key = entry.getKey();
 //		    Integer value = entry.getValue();
 //			System.out.println(key + "  " + value);
 //		}
+                
+                /* Cálculo dos resultados */
+//                HashMap<String, Integer> listaResultado = testeP.calculaResultado(testeP.getListaRespostas());
+//                System.out.println(testeP.exibeResultadoStr()); 
+                
+                
+
 		
                 
     }

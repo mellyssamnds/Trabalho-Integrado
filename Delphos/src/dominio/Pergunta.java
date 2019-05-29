@@ -70,12 +70,12 @@ public class Pergunta {
 	
 
 	public Pergunta() {
-		this.listaPerguntas();
+		this.listarPerguntas();
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<String> getListaKeys() {
-		return (List<String>) listaPerguntas().keySet();
+		return (List<String>) listarPerguntas().keySet();
 	}
 	
 	public String getTextoPergunta(String key) {
@@ -195,7 +195,7 @@ public class Pergunta {
                 
 	/* outros metodos da classe */
 	
-	public  HashMap<String, String> listaPerguntas() {
+	public  HashMap<String, String> listarPerguntas() {
 						
 		HashMap<String, String> listaPerg = new HashMap<String, String>();
 		

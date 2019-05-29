@@ -6,7 +6,7 @@
 package persistencia;
 
 import conexao.Conector;
-import dominio.Usuario;
+import dominio.Cliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -50,14 +50,14 @@ public class UsuarioDAOImpl<G> extends Conector implements GenericDAO<G> {
         try (Connection connection = this.openConnection();
                 PreparedStatement statement = connection.prepareStatement(INSERT);) {
 
-            System.out.println("obj: " + ((Usuario) obj).getNome());
-            Date data = ((Usuario) obj).getDataNascimento();
+            System.out.println("obj: " + ((Cliente) obj).getNome());
+            Date data = ((Cliente) obj).getDataNascimento();
             java.sql.Date date = new java.sql.Date(data.getTime());
 
-            statement.setString(1, ((Usuario) obj).getNome());
-            statement.setString(2, ((Usuario) obj).getCpf());
-            statement.setString(3, ((Usuario) obj).getEmail());
-            statement.setString(4, ((Usuario) obj).getSenha());
+            statement.setString(1, ((Cliente) obj).getNome());
+            statement.setString(2, ((Cliente) obj).getCpf());
+            statement.setString(3, ((Cliente) obj).getEmail());
+            statement.setString(4, ((Cliente) obj).getSenha());
             statement.setDate(5,date);
 
             stat = statement.execute(); 

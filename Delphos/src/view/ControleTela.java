@@ -21,16 +21,16 @@ import persistencia.UsuarioDAOImpl;
  */
 public class ControleTela {
     
-    public static boolean cadastrarUsuario(Usuario p) throws ParseException, SQLException, ClassNotFoundException {
+    public static boolean cadastrarUsuario(Cliente p) throws ParseException, SQLException, ClassNotFoundException {
 
-        UsuarioDAOImpl<Usuario> dao = new UsuarioDAOImpl<>();
+        UsuarioDAOImpl<Cliente> dao = new UsuarioDAOImpl<>();
 
         return dao.insert(p);
     }
     
-    public Usuario leDadosUsuario() throws ParseException, SQLException, ClassNotFoundException{
+    public Cliente leDadosUsuario() throws ParseException, SQLException, ClassNotFoundException{
         
-        Usuario usuario = new Usuario();
+        Cliente usuario = new Cliente();
         Scanner ler = new Scanner(System.in);
    
         System.out.println("E-mail:");
@@ -63,7 +63,7 @@ public class ControleTela {
     public HashMap<String, Integer> realizaTeste(HashMap<String, String> dicP) {
 		
 		/* cria um dicionario para guardar as respostas dadas na realizacao do teste */
-		HashMap<String, Integer> listaRespostas = new HashMap<String, Integer>();
+		HashMap<String, Integer> listaRespostas = new HashMap<>();
 		/* instancia uma Resposta - gabarito 
 		Resposta gabarito = new Resposta();*/
 		/* para a leitura do teclado */
@@ -92,13 +92,5 @@ public class ControleTela {
 		
 		return listaRespostas;
 	}
-//    public exibeResultados()
-        
-          /*buscar no banco os resultados*/
-          /*Extrovesão: 20%
-          Amabilidade: 10%
-          Abertura a novas experiências: 50%
-          Conscienciosidade: 80
-          neuroticismo: 40% */
 }    
 
