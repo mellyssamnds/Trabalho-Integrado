@@ -23,12 +23,17 @@ public class TestePersonalidade extends IdGeneratorSingleton {
 
     /* metodos setters e getters */
     
-    public TestePersonalidade(Cliente cliente, HashMap<String,Integer> listaRespostas, Date dataHora){
-    	//this.idTeste = idTeste;
-        this.dataHora = dataHora;
-        this.cliente = cliente;
-        this.listaRespostas = listaRespostas;
-    }
+//    public TestePersonalidade(Cliente cliente, HashMap<String,Integer> listaRespostas){
+//        this.cliente = cliente;
+//        this.listaRespostas = listaRespostas;
+//    }
+    
+//    public TestePersonalidade(Cliente cliente, HashMap<String,Integer> listaRespostas, Date dataHora){
+//    	//this.idTeste = idTeste;
+//        this.dataHora = dataHora;
+//        this.cliente = cliente;
+//        this.listaRespostas = listaRespostas;
+//    }
     
     public IdGeneratorSingleton getIdTeste() {
         return this.idTeste;
@@ -46,7 +51,27 @@ public class TestePersonalidade extends IdGeneratorSingleton {
         return this.listaRespostas;
     }
 
- 
+    public void setListaRespostas(HashMap<String, Integer> listaRespostas) {
+        this.listaRespostas = listaRespostas;
+    }
+
+    public void setIdTeste(IdGeneratorSingleton idTeste) {
+        this.idTeste = idTeste;
+    }
+
+    public void setListaResultado(HashMap<String, Integer> listaResultado) {
+        this.listaResultado = listaResultado;
+    }
+
+    public void setDataHora(Date dataHora) {
+        this.dataHora = dataHora;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+    
+    
 	public HashMap<String, Integer> calculaResultado(HashMap<String, Integer> listaRespostas) {
     	
     	int notaEXT = 20;

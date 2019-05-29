@@ -17,12 +17,12 @@ import view.ControleTela;
  */
 public class BuilderTestePersonalidade{
     private Cliente cliente;
-    private HashMap<String, Integer> respostas;
+    private HashMap<String,Integer> respostas;
     private HashMap<String,String> perguntas;
     private Date dataHora;
     
     
-    public BuilderTestePersonalidade(Cliente usuario, HashMap<String, String> perguntas, HashMap<String,Integer> respostas){
+    public BuilderTestePersonalidade(Cliente cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas){
         this.cliente = cliente;
         this.perguntas = perguntas;
         this.respostas = respostas;
@@ -31,11 +31,9 @@ public class BuilderTestePersonalidade{
     
     /*tarefas*/
     
-    public HashMap<String,Integer> preencheRespostas(HashMap<String, String> perguntas){
+    public void preencheRespostas(HashMap<String, String> perguntas){
         ControleTela tela = new ControleTela();
-        this.respostas = tela.realizaTeste(perguntas);
-        
-        return this.respostas;
+        this.respostas = tela.realizaTeste(perguntas);/*armazena na variável declarada do builder*/
     }
     
     /*registra hora e data da realização do teste*/
@@ -54,7 +52,11 @@ public class BuilderTestePersonalidade{
     
     //adiciona todos os atributos preenchidos em teste e guarda os valores no banco
     public TestePersonalidade montarTestePersonalidade(TestePersonalidade testeP){
-        testeP = new TestePersonalidade(this.cliente,this.respostas,this.dataHora);
+        //testeP = new TestePersonalidade(this.cliente,this.respostas,this.dataHora);
+        testeP.setCliente(this.cliente);
+        testeP.setListaRespostas(this.respostas);
+        testeP.setDataHora(this.dataHora);
+        
         return testeP;
         
     }

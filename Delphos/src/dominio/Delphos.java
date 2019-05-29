@@ -32,12 +32,13 @@ public class Delphos {
 		HashMap<String, String> perguntas = todasPerguntas.listarPerguntas();
                
                 /* cria um dicionario para armazenar as respostas */
-                HashMap<String, Integer> respostas = new HashMap<>(); 
+                HashMap<String, Integer> respostas = new HashMap<>();
+                
                 
                 DiretorTestePersonalidade CriaTesteP = new DiretorTestePersonalidade();
                 TestePersonalidade testeP = CriaTesteP.builder(cliente, perguntas, respostas);
                 
-               System.out.println(testeP.exibeResultadoStr()); 
+                System.out.println(testeP.exibeRespostasStr()); 
                 
                 
 		 //teste que imprime todas as respostas com seus respectivos IDs 
@@ -48,8 +49,9 @@ public class Delphos {
 //		}
                 
                 /* Cálculo dos resultados */
-//                HashMap<String, Integer> listaResultado = testeP.calculaResultado(testeP.getListaRespostas());
-//                System.out.println(testeP.exibeResultadoStr()); 
+                HashMap<String, Integer> listaResultado = new HashMap<>();
+                listaResultado = testeP.calculaResultado(testeP.getListaRespostas());
+                System.out.println(testeP.exibeResultadoStr()); 
                 
                 
 
