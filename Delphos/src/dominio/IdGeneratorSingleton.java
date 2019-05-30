@@ -4,7 +4,7 @@ public class IdGeneratorSingleton {
 	
 	private static IdGeneratorSingleton instance;
 	
-	private long idInicial = 999990100;
+	private long idInicial = 1;
 	
 	public synchronized static IdGeneratorSingleton getInstance() {
 		if(instance == null) {

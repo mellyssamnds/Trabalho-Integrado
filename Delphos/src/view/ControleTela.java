@@ -70,7 +70,7 @@ public class ControleTela {
 		Scanner ler = new Scanner(System.in);
 		
 		System.out.println("Vamos iniciar o teste de personalidade!!!");
-		System.out.println("Lembre-se que as respostas s�o dadas de acordo com o seguinte gabarito:\n"
+		System.out.println("Lembre-se que as respostas sao dadas de acordo com o seguinte gabarito:\n"
 							+ "1: Discordo totalmente\n"
 							+ "2: Discordo parcialmente\n"
 							+ "3: Neutro\n"
@@ -80,7 +80,7 @@ public class ControleTela {
 		for(Map.Entry<String, String> entry : dicP.entrySet()) {
 			int resp = 0;
 			String key = entry.getKey();
-		    String value = entry.getValue();
+                        String value = entry.getValue();
 			System.out.println(key + "  " + value);
 			System.out.printf("Resposta: ");
 			resp = ler.nextInt();

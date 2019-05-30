@@ -12,16 +12,15 @@ import java.util.*;
  *
  * @author Jennifer, Anne
  */
-public class TestePersonalidade extends IdGeneratorSingleton {
+public class TestePersonalidade  {
 	
-    private IdGeneratorSingleton idTeste = IdGeneratorSingleton.getInstance();
+  //private IdGeneratorSingleton idTeste = IdGeneratorSingleton.getInstance().getNextSerial()
     private Date dataHora;
+    private long idTeste;
     private Cliente cliente;
     private HashMap<String, Integer> listaRespostas;
     private HashMap<String, Integer> listaResultado = new HashMap<>();
     
-
-    /* metodos setters e getters */
     
 //    public TestePersonalidade(Cliente cliente, HashMap<String,Integer> listaRespostas){
 //        this.cliente = cliente;
@@ -35,7 +34,9 @@ public class TestePersonalidade extends IdGeneratorSingleton {
 //        this.listaRespostas = listaRespostas;
 //    }
     
-    public IdGeneratorSingleton getIdTeste() {
+    /* metodos setters e getters */
+    
+    public long getIdTeste() {
         return this.idTeste;
     }
     
@@ -55,10 +56,6 @@ public class TestePersonalidade extends IdGeneratorSingleton {
         this.listaRespostas = listaRespostas;
     }
 
-    public void setIdTeste(IdGeneratorSingleton idTeste) {
-        this.idTeste = idTeste;
-    }
-
     public void setListaResultado(HashMap<String, Integer> listaResultado) {
         this.listaResultado = listaResultado;
     }
@@ -69,6 +66,10 @@ public class TestePersonalidade extends IdGeneratorSingleton {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public void setIdTeste(long idTeste) {
+        this.idTeste = idTeste;
     }
     
     

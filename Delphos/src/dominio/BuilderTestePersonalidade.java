@@ -53,6 +53,8 @@ public class BuilderTestePersonalidade{
     //adiciona todos os atributos preenchidos em teste e guarda os valores no banco
     public TestePersonalidade montarTestePersonalidade(TestePersonalidade testeP){
         //testeP = new TestePersonalidade(this.cliente,this.respostas,this.dataHora);
+        
+        testeP.setIdTeste(IdGeneratorSingleton.getInstance().getNextSerial());
         testeP.setCliente(this.cliente);
         testeP.setListaRespostas(this.respostas);
         testeP.setDataHora(this.dataHora);

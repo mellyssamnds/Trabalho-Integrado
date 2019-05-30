@@ -38,7 +38,7 @@ public class Delphos {
                 DiretorTestePersonalidade CriaTesteP = new DiretorTestePersonalidade();
                 TestePersonalidade testeP = CriaTesteP.builder(cliente, perguntas, respostas);
                 
-                System.out.println(testeP.exibeRespostasStr()); 
+                //System.out.println(testeP.exibeRespostasStr()); 
                 
                 
 		 //teste que imprime todas as respostas com seus respectivos IDs 
