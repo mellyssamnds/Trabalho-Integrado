@@ -49,7 +49,7 @@ public class UsuarioDAOImpl<G> extends Conector implements GenericDAO<G> {
 	                pessoa.setEmail(resultadoConsulta.getString(EMAIL));
 	                pessoa.setCpf((String) resultadoConsulta.getString(CPF));
 	                pessoa.setSenha(resultadoConsulta.getString(SENHA));
-	                pessoa.setId(resultadoConsulta.getInt(ID_CLIENTE));
+	                pessoa.setId(resultadoConsulta.getInt(ID_USUARIO));
 	                pessoa.setNascimento(resultadoConsulta.getDate(DATA));
             	}
             }
