@@ -17,7 +17,7 @@ import java.util.List;
 public class UsuarioDAOImpl<G> extends Conector implements GenericDAO<G> {
 
     private static final String SELECT = "SELECT * FROM usuario ";
-//    private static final String SELECT_LOGIN = "SELECT * FROM cliente where email = ? and senha = ?;";
+    private static final String SELECT_LOGIN = "SELECT * FROM cliente where email = ? and senha = ?;";
     private static final String INSERT = "INSERT INTO usuario (id_usuario,nome,cpf,"
             + "email,senha,dataNascimento) VALUES(?,?,?,?,?,?);";
 //    private static final String DELETE = "DELETE FROM cliente WHERE id_cliente = ?;";
@@ -25,18 +25,47 @@ public class UsuarioDAOImpl<G> extends Conector implements GenericDAO<G> {
           + "email,senha,dataNascimento) = (?,?,?,?,?) WHERE id_usuario = ?;";
 //
     private static final String ID_USUARIO = "id_usuario";
-//    private static final String NOME = "nome";
-//    private static final String EMAIL = "email";
-//    private static final String SENHA = "senha";
-//    private static final String CPF = "cpf";
+    private static final String NOME = "nome";
+    private static final String EMAIL = "email";
+    private static final String SENHA = "senha";
+    private static final String CPF = "cpf";
     private static final String ORDER = "ORDER BY id_usuario ASC";
-//    private static final String DATA = "dataNascimento";
+    private static final String DATA = "dataNascimento";
 
 //    List<Usuario> pessoas = new ArrayList<>();
-//    private static Usuario pessoa = new Usuario();
+    private static Usuario pessoa = new Usuario();
     
+    public boolean selectLogin(String email, String senha) throws SQLException, ClassNotFoundException {
+        boolean result = false;
+
+        try (Connection connection = this.openConnection();
+                PreparedStatement statement = connection.prepareStatement(SELECT_LOGIN);) {
+            statement.setString(1, email);
+            statement.setString(2, senha);
+            try (ResultSet resultadoConsulta = statement.executeQuery()) {
+            	result = resultadoConsulta.next();
+            	if(result) {
+	            	pessoa.setNome(resultadoConsulta.getString(NOME));
+	                pessoa.setEmail(resultadoConsulta.getString(EMAIL));
+	                pessoa.setCpf((String) resultadoConsulta.getString(CPF));
+	                pessoa.setSenha(resultadoConsulta.getString(SENHA));
+	                pessoa.setId(resultadoConsulta.getInt(ID_CLIENTE));
+	                pessoa.setNascimento(resultadoConsulta.getDate(DATA));
+            	}
+            }
+        } finally {
+            this.closeConnection(con);
+        }
+        return result;
+    }
     
-   
+    public static Usuario recuperarUsuario(String email, String senha) throws ClassNotFoundException, SQLException {
+		UsuarioDAOImpl<Usuario> dao = new UsuarioDAOImpl<>();
+    	if (pessoa == null) {
+			dao.selectLogin(email, senha);
+		}
+    	return pessoa;
+    }
     /**
      *
      * @param obj
