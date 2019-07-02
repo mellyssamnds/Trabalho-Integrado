@@ -3,18 +3,18 @@
  * 16/04/2019
  */
 
-package dominio;
+package delphos.model.cdp;
 
 import java.util.Date;
 import java.util.Scanner;
 
-public class Cliente {
+public class Usuario {
 	
 	String nome;
 	String email; /*podemos usar como login*/
         String cpf;
         String senha;
-        Date DataNascimento;
+        String DataNascimento;
     	
 	/* metodos setters e getters */
 	
@@ -53,11 +53,11 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return DataNascimento;
     }
 
-    public void setDataNascimento(Date DataNascimento) {
+    public void setDataNascimento(String DataNascimento) {
         this.DataNascimento = DataNascimento;
     }
 

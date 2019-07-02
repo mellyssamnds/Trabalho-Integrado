@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dominio;
+package delphos.model.cdp;
 
 import java.util.HashMap;
 
@@ -16,7 +16,7 @@ public class DiretorTestePersonalidade {
     public DiretorTestePersonalidade(){
     }
     
-    public TestePersonalidade builder(Cliente cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas) throws Exception{
+    public TestePersonalidade builder(Usuario cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas) throws Exception{
         
         TestePersonalidade testeP = new TestePersonalidade(); //estava reclamando que precisava ser inicializado
         BuilderTestePersonalidade builder = new BuilderTestePersonalidade(cliente,perguntas,respostas);

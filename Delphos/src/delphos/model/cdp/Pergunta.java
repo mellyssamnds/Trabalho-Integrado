@@ -1,4 +1,4 @@
-package dominio;
+package delphos.model.cdp;
 
 
 import java.util.HashMap;

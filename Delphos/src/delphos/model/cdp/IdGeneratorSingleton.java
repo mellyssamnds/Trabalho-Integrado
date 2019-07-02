@@ -1,4 +1,4 @@
-package dominio;
+package delphos.model.cdp;
 
 public class IdGeneratorSingleton {
 	

@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dominio;
+package delphos.model.cdp;
 
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.HashMap;
 import view.ControleTela;
+import static view.ControleTela.atualizaDadosUsuario;
+import static view.ControleTela.cadastrarUsuario;
 
 /**
  *
@@ -22,21 +24,29 @@ public class Delphos {
     public static void main(String[] args) throws ParseException, SQLException, ClassNotFoundException, Exception {
 		
                 /*chama o cadastro*/
-                Cliente cliente;
-                ControleTela c = new ControleTela();
-                cliente = c.leDadosUsuario();
+                Usuario usuario = new Usuario();
+                usuario.setCpf("123456789");
+                usuario.setNome("Estephanny");
+                usuario.setDataNascimento("30/01/1996");
+                usuario.setSenha("12345");
+                usuario.setEmail("MellyssaEst@gmail.com");
+                //ControleTela c = new ControleTela();
+                //usuario = c.leDadosUsuario();
+                //boolean p = cadastrarUsuario(usuario);
+                atualizaDadosUsuario(usuario);
+                //System.out.println("deu certo " + p);
                 
                 /* inicializa as perguntas */
-		Pergunta todasPerguntas = new Pergunta();
+		//Pergunta todasPerguntas = new Pergunta();
 		/* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
-		HashMap<String, String> perguntas = todasPerguntas.listarPerguntas();
+		//HashMap<String, String> perguntas = todasPerguntas.listarPerguntas();
                
                 /* cria um dicionario para armazenar as respostas */
-                HashMap<String, Integer> respostas = new HashMap<>();
+                //HashMap<String, Integer> respostas = new HashMap<>();
                 
                 
-                DiretorTestePersonalidade CriaTesteP = new DiretorTestePersonalidade();
-                TestePersonalidade testeP = CriaTesteP.builder(cliente, perguntas, respostas);
+                //DiretorTestePersonalidade CriaTesteP = new DiretorTestePersonalidade();
+                //TestePersonalidade testeP = CriaTesteP.builder(cliente, perguntas, respostas);
                 
                 //System.out.println(testeP.exibeRespostasStr()); 
                 
@@ -49,9 +59,9 @@ public class Delphos {
 //		}
                 
                 /* Cálculo dos resultados */
-                HashMap<String, Integer> listaResultado = new HashMap<>();
-                listaResultado = testeP.calculaResultado(testeP.getListaRespostas());
-                System.out.println(testeP.exibeResultadoStr()); 
+//                HashMap<String, Integer> listaResultado = new HashMap<>();
+//                listaResultado = testeP.calculaResultado(testeP.getListaRespostas());
+//                System.out.println(testeP.exibeResultadoStr()); 
                 
                 
 

@@ -5,7 +5,7 @@
  */
 package view;
 
-import dominio.*;
+import delphos.model.cdp.Usuario;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import persistencia.UsuarioDAOImpl;
+import delphos.model.cgd.UsuarioDAOImpl;
 
 /**
  *
@@ -21,16 +21,23 @@ import persistencia.UsuarioDAOImpl;
  */
 public class ControleTela {
     
-    public static boolean cadastrarUsuario(Cliente p) throws ParseException, SQLException, ClassNotFoundException {
+    public static boolean cadastrarUsuario(Usuario p) throws ParseException, SQLException, ClassNotFoundException {
 
-        UsuarioDAOImpl<Cliente> dao = new UsuarioDAOImpl<>();
+        UsuarioDAOImpl<Usuario> dao = new UsuarioDAOImpl<>();
 
         return dao.insert(p);
     }
     
-    public Cliente leDadosUsuario() throws ParseException, SQLException, ClassNotFoundException{
+    public static void atualizaDadosUsuario(Usuario p) throws ParseException, SQLException, ClassNotFoundException {
+
+        UsuarioDAOImpl<Usuario> dao = new UsuarioDAOImpl<>();
+
+        dao.update(p);
+    }
+    
+    public Usuario leDadosUsuario() throws ParseException, SQLException, ClassNotFoundException{
         
-        Cliente usuario = new Cliente();
+        Usuario usuario = new Usuario();
         Scanner ler = new Scanner(System.in);
    
         System.out.println("E-mail:");
@@ -54,10 +61,9 @@ public class ControleTela {
         bufferLeitura = ler.nextLine();
         usuario.setSenha(bufferLeitura);
         
-        return usuario;
         
-//        boolean p = cadastrarUsuario(usuario);
-//        System.out.println("deu certo " + p);
+        
+        return usuario;
     }
 
     public HashMap<String, Integer> realizaTeste(HashMap<String, String> dicP) {

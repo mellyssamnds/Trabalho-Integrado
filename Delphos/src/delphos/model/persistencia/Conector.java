@@ -1,4 +1,4 @@
-package conexao;
+package delphos.model.persistencia;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -31,20 +31,20 @@ public class Conector {
         con.close();
     }
 
-//    public int getNextId(String select, String id) throws SQLException, ClassNotFoundException {
-//        int res = -0;
-//
-//        try (Connection connection = this.openConnection();
-//                PreparedStatement statement = connection.prepareStatement(select,
-//                        ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-//                ResultSet result = statement.executeQuery();) {
-//            if (result.last()) {
-//                res = result.getInt(id);
-//                return res + 1;
-//            }
-//        } finally {
-//            this.closeConnection(con);
-//        }
-//        return res;
-//    }
+    public int getNextId(String select, String id) throws SQLException, ClassNotFoundException {
+        int res = -0;
+
+        try (Connection connection = this.openConnection();
+                PreparedStatement statement = connection.prepareStatement(select,
+                        ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+                ResultSet result = statement.executeQuery();) {
+            if (result.last()) {
+                res = result.getInt(id);
+                return res + 1;
+            }
+        } finally {
+            this.closeConnection(con);
+        }
+        return res;
+    }
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dominio;
+package delphos.model.cdp;
 
 import java.sql.SQLException;
 import java.text.ParseException;
@@ -16,13 +16,13 @@ import view.ControleTela;
  * @author Jennifer
  */
 public class BuilderTestePersonalidade{
-    private Cliente cliente;
+    private Usuario cliente;
     private HashMap<String,Integer> respostas;
     private HashMap<String,String> perguntas;
     private Date dataHora;
     
     
-    public BuilderTestePersonalidade(Cliente cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas){
+    public BuilderTestePersonalidade(Usuario cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas){
         this.cliente = cliente;
         this.perguntas = perguntas;
         this.respostas = respostas;

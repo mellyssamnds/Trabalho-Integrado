@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package dominio;
+package delphos.model.cdp;
 
 import java.util.*;
 
@@ -17,7 +17,7 @@ public class TestePersonalidade  {
   //private IdGeneratorSingleton idTeste = IdGeneratorSingleton.getInstance().getNextSerial()
     private Date dataHora;
     private long idTeste;
-    private Cliente cliente;
+    private Usuario cliente;
     private HashMap<String, Integer> listaRespostas;
     private HashMap<String, Integer> listaResultado = new HashMap<>();
     
@@ -44,7 +44,7 @@ public class TestePersonalidade  {
         return this.dataHora;
     }
     
-    public Cliente getCliente() {
+    public Usuario getCliente() {
         return this.cliente;
     }
     
@@ -64,7 +64,7 @@ public class TestePersonalidade  {
         this.dataHora = dataHora;
     }
 
-    public void setCliente(Cliente cliente) {
+    public void setCliente(Usuario cliente) {
         this.cliente = cliente;
     }
 

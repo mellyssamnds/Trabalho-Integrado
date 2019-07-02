@@ -5,8 +5,8 @@
  */
 package view;
 
-import dominio.TestePersonalidade;
-import dominio.Cliente;
+import delphos.model.cdp.TestePersonalidade;
+import delphos.model.cdp.Usuario;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,10 +18,10 @@ import java.util.Scanner;
  */
 public class TelaTestP {
     
-    private Cliente usuario;
+    private Usuario usuario;
     private TestePersonalidade test;
     
-    public TelaTestP(Cliente usario, TestePersonalidade teste){
+    public TelaTestP(Usuario usario, TestePersonalidade teste){
         this.usuario = usuario;
         this.test = teste;                
     }
