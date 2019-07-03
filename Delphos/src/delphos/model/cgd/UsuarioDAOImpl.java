@@ -32,7 +32,6 @@ public class UsuarioDAOImpl<G> extends Conector implements GenericDAO<G> {
     private static final String ORDER = "ORDER BY id_usuario ASC";
     private static final String DATA = "dataNascimento";
 
-//    List<Usuario> pessoas = new ArrayList<>();
    
 
     @Override
