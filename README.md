@@ -1,5 +1,5 @@
 ﻿# Trabalho Integrado das disciplinas de Programação Orientada a Objetos II, Banco de Dados e Projeto de Sistemas
-com os Professores Felipe Franchiane, Moisés Omena e Rodrigo Calhau em 2019/1 
+com os Professores Felipe Frechiane, Moisés Omena e Rodrigo Calhau em 2019/1 
 
 # Tema: Delphos - Inteligência Emocional <br>
 
@@ -139,8 +139,8 @@ RN06 | O sistema deve efetuar o controle de itens recomendados, realizando cria�
 
 ## 5. Padrões de Projeto <br>
 
-## 5.1 Padrões Builder <br>
+### 5.1 Padrões Builder <br>
 
-## 5.2 Padrões Singleton <br>
+### 5.2 Padrões Singleton <br>
 
-## 5.3 Padrões Peso Mosca <br>
+### 5.3 Padrões Peso Mosca <br>
