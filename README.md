@@ -1,5 +1,5 @@
 ﻿# Trabalho Integrado das disciplinas de Programação Orientada a Objetos II, Banco de Dados e Projeto de Sistemas
-com os Professores Felipe Franchiane, Moisés Omena e Rodrigo Calhau em 2019/1 
+com os Professores Felipe Frechiane, Moisés Omena e Rodrigo Calhau em 2019/1 
 
 # Tema: Delphos - Inteligência Emocional <br>
 
@@ -143,7 +143,10 @@ RN06 | O sistema deve efetuar o controle de itens recomendados, realizando cria�
 
   Um objeto do tipo Gabarito reúne informações acerca da data em que foi gerado, as respostas que foram dadas pelo usuário em questão e as perguntas que serão exibidas, percebe-se então que são construção não é tão simples e depende de outras classes. Para organizar melhor a ordem dessa construção foi utilizado o padrão de criação Builder.
 
-  
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/DiagramaBuilder.PNG)
+
+Diagrama de classes - Recorte com implementação do padrão builder.
+
   A estrutura desse padrão aplicada ao nosso projeto é a seguinte: a classe DiretorGabarito contém uma sequência de chamadas de métodos organizados em uma ordem específica para a construção do objeto Gabarito; a implementação desses métodos fica implementada na classe BuilderGabarito. Abaixo estão os trechos de código que exibem a implementação das mesmas.
   
   
@@ -223,11 +226,14 @@ RN06 | O sistema deve efetuar o controle de itens recomendados, realizando cria�
 
 ## 5.4 Padrão Observer <br>
 
-## 5.5 Padrão DAO <br>
+## 5.5 Padrão Data Access Object <br>
 
   Para a parte do projeto que engloba a persistência dos dados optamos por utilizar o padrão Data Access Object (DAO), que encapsula os mecanismos de acesso a dados, fornecendo uma interface genérica com métodos de acesso que podem ser alterados, independentemente do código que utiliza os dados. 
   
   
+  ![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/diagramaDAO.PNG)
+  
+  Diagrama de classes - Recorte com implementação do Padrão DAO.
   
   Em nosso projeto a interface genérica corresponde a GenericDAO e as classes que implementam a mesma são representadas com a junção do nome da classe com o sufixo 'DAOimpl'. A seguir há dois trechos de código que representam a interface e uma das classes implementadoras da mesma, a UsuarioDAOImpl.
   
