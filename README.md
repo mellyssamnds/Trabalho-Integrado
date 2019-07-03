@@ -104,19 +104,7 @@ RNF14 | O sistema deve manter um histórico dos testes realizados | Funcionalida
 
 Identificador | Descrição | Categoria | Escopo
 ------------ | ------------- |------------ | -------------
-
-RN01 | O cálculo do resultado do teste será realizado através da seguinte fórmula: 
-
-(i) NotaExt = 20 + EXT1 - EXT2 + EXT3 - EXT4 + EXT5 - EXT6 + EXT7 - EXT8 + EXT9 - EXT10
-
-(ii) NotaEst = 38 - EST1 + EST2 - EST3 + EST4 - EST5 - EST6 - EST7 - EST8 - EST9 - EST10
-
-(iii) NotaAgr = 14 - AGR1 + AGR2 - AGR3 + AGR4 - AGR5 + AGR6 - AGR7 + AGR8 + AGR9 + AGR10
-
-(iv) NotaCsn = 14 + CSN1 - CSN2 + CSN3 - CSN4 + CSN5 - CSN6 + CSN7 - CSN8 + CSN9 + CSN10
-
-(v) NotaOpn = 8 + OPN1 - OPN2 + OPN3 - OPN4 + OPN5 + OPN6 + OPN7 + OPN8 + OPN9 + OPN10 | Cálculo | Sistema
-
+RN01 | O cálculo do resultado do teste será realizado através da seguinte fórmula: (i) NotaExt = 20 + EXT1 - EXT2 + EXT3 - EXT4 + EXT5 - EXT6 + EXT7 - EXT8 + EXT9 - EXT10 (ii) NotaEst = 38 - EST1 + EST2 - EST3 + EST4 - EST5 - EST6 - EST7 - EST8 - EST9 - EST10 (iii) NotaAgr = 14 - AGR1 + AGR2 - AGR3 + AGR4 - AGR5 + AGR6 - AGR7 + AGR8 + AGR9 + AGR10 (iv) NotaCsn = 14 + CSN1 - CSN2 + CSN3 - CSN4 + CSN5 - CSN6 + CSN7 - CSN8 + CSN9 + CSN10 (v) NotaOpn = 8 + OPN1 - OPN2 + OPN3 - OPN4 + OPN5 + OPN6 + OPN7 + OPN8 + OPN9 + OPN10 | Cálculo | Sistema
 RN02 | O teste de personalidade só poderá ser realizado novamente com no mínimo seis meses após o anterior | Restrição | Funcionalidade
 RN03 | A nota de cada fator tem que estar entre zero e quarenta [https://openpsychometrics.org/printable/big-five-personality-test.pdf](https://openpsychometrics.org/printable/big-five-personality-test.pdf) | Restrição | Sistema
 RN04 | O restante dos recursos do sistema só serão liberados depois que o usuário realizar o primeiro teste de personalidade | Ativadores de Ação | Funcionalidade
