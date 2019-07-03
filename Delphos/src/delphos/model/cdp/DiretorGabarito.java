@@ -11,15 +11,15 @@ import java.util.HashMap;
  *
  * @author Jennifer
  */
-public class DiretorTestePersonalidade {
+public class DiretorGabarito {
     
-    public DiretorTestePersonalidade(){
+    public DiretorGabarito(){
     }
     
-    public TestePersonalidade builder(Usuario cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas) throws Exception{
+    public Gabarito builder(Usuario cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas) throws Exception{
         
-        TestePersonalidade testeP = new TestePersonalidade(); //estava reclamando que precisava ser inicializado
-        BuilderTestePersonalidade builder = new BuilderTestePersonalidade(cliente,perguntas,respostas);
+        Gabarito testeP = new Gabarito();
+        BuilderGabarito builder = new BuilderGabarito(cliente,perguntas,respostas);
         
         /*adicionar a sequência de tarefas*/
         

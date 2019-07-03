@@ -15,14 +15,14 @@ import view.ControleTela;
  *
  * @author Jennifer
  */
-public class BuilderTestePersonalidade{
+public class BuilderGabarito{
     private Usuario cliente;
     private HashMap<String,Integer> respostas;
     private HashMap<String,String> perguntas;
     private Date dataHora;
     
     
-    public BuilderTestePersonalidade(Usuario cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas){
+    public BuilderGabarito(Usuario cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas){
         this.cliente = cliente;
         this.perguntas = perguntas;
         this.respostas = respostas;
@@ -51,8 +51,8 @@ public class BuilderTestePersonalidade{
     }
     
     //adiciona todos os atributos preenchidos em teste e guarda os valores no banco
-    public TestePersonalidade montarTestePersonalidade(TestePersonalidade testeP){
-        //testeP = new TestePersonalidade(this.cliente,this.respostas,this.dataHora);
+    public Gabarito montarTestePersonalidade(Gabarito testeP){
+        //testeP = new Gabarito(this.cliente,this.respostas,this.dataHora);
         
         testeP.setIdTeste(IdGeneratorSingleton.getInstance().getNextSerial());
         testeP.setCliente(this.cliente);

@@ -12,7 +12,7 @@ import java.util.*;
  *
  * @author Jennifer, Anne
  */
-public class TestePersonalidade  {
+public class Gabarito  {
 	
   //private IdGeneratorSingleton idTeste = IdGeneratorSingleton.getInstance().getNextSerial()
     private Date dataHora;
@@ -22,12 +22,12 @@ public class TestePersonalidade  {
     private HashMap<String, Integer> listaResultado = new HashMap<>();
     
     
-//    public TestePersonalidade(Cliente cliente, HashMap<String,Integer> listaRespostas){
+//    public Gabarito(Cliente cliente, HashMap<String,Integer> listaRespostas){
 //        this.cliente = cliente;
 //        this.listaRespostas = listaRespostas;
 //    }
     
-//    public TestePersonalidade(Cliente cliente, HashMap<String,Integer> listaRespostas, Date dataHora){
+//    public Gabarito(Cliente cliente, HashMap<String,Integer> listaRespostas, Date dataHora){
 //    	//this.idTeste = idTeste;
 //        this.dataHora = dataHora;
 //        this.cliente = cliente;

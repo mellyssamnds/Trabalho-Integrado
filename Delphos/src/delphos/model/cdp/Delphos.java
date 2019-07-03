@@ -8,6 +8,7 @@ package delphos.model.cdp;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.HashMap;
+import java.util.Map;
 import view.ControleTela;
 import static view.ControleTela.atualizaDadosUsuario;
 import static view.ControleTela.cadastrarUsuario;
@@ -25,43 +26,39 @@ public class Delphos {
 		
                 /*chama o cadastro*/
                 Usuario usuario = new Usuario();
-                usuario.setCpf("123456789");
-                usuario.setNome("Estephanny");
-                usuario.setDataNascimento("30/01/1996");
-                usuario.setSenha("12345");
-                usuario.setEmail("MellyssaEst@gmail.com");
-                //ControleTela c = new ControleTela();
-                //usuario = c.leDadosUsuario();
-                //boolean p = cadastrarUsuario(usuario);
-                atualizaDadosUsuario(usuario);
-                //System.out.println("deu certo " + p);
+                
+                ControleTela c = new ControleTela();
+                usuario = c.leDadosUsuario();
+               cadastrarUsuario(usuario);
+               //atualizaDadosUsuario(usuario);
                 
                 /* inicializa as perguntas */
-		//Pergunta todasPerguntas = new Pergunta();
-		/* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
-		//HashMap<String, String> perguntas = todasPerguntas.listarPerguntas();
+		Pergunta todasPerguntas = new Pergunta();
+		
+                /* cria um dicionario com chave:ID_Pergunta e valor:DescricaoPergunta */
+		HashMap<String, String> perguntas = todasPerguntas.listarPerguntas();
                
                 /* cria um dicionario para armazenar as respostas */
-                //HashMap<String, Integer> respostas = new HashMap<>();
+                HashMap<String, Integer> respostas = new HashMap<>();
                 
                 
-                //DiretorTestePersonalidade CriaTesteP = new DiretorTestePersonalidade();
-                //TestePersonalidade testeP = CriaTesteP.builder(cliente, perguntas, respostas);
+                DiretorGabarito CriaTesteP = new DiretorGabarito();
+                Gabarito testeP = CriaTesteP.builder(usuario, perguntas, respostas);
                 
                 //System.out.println(testeP.exibeRespostasStr()); 
                 
                 
 		 //teste que imprime todas as respostas com seus respectivos IDs 
-//		for(Map.Entry<String, Integer> entry : testeP.getListaRespostas().entrySet()) {
-//		String key = entry.getKey();
-//		    Integer value = entry.getValue();
-//			System.out.println(key + "  " + value);
-//		}
+		for(Map.Entry<String, Integer> entry : testeP.getListaRespostas().entrySet()) {
+		String key = entry.getKey();
+		    Integer value = entry.getValue();
+			System.out.println(key + "  " + value);
+		}
                 
                 /* Cálculo dos resultados */
-//                HashMap<String, Integer> listaResultado = new HashMap<>();
-//                listaResultado = testeP.calculaResultado(testeP.getListaRespostas());
-//                System.out.println(testeP.exibeResultadoStr()); 
+                HashMap<String, Integer> listaResultado = new HashMap<>();
+                listaResultado = testeP.calculaResultado(testeP.getListaRespostas());
+                System.out.println(testeP.exibeResultadoStr()); 
                 
                 
 
