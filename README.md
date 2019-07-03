@@ -139,8 +139,145 @@ RN06 | O sistema deve efetuar o controle de itens recomendados, realizando cria�
 
 ## 5. Padrões de Projeto <br>
 
-## 5.1 Padrões Builder <br>
+## 5.1 Padrão Builder <br>
 
-## 5.2 Padrões Singleton <br>
+  Um objeto do tipo Gabarito reúne informações acerca da data em que foi gerado, as respostas que foram dadas pelo usuário em questão e as perguntas que serão exibidas, percebe-se então que são construção não é tão simples e depende de outras classes. Para organizar melhor a ordem dessa construção foi utilizado o padrão de criação Builder.
 
-## 5.3 Padrões Peso Mosca <br>
+  
+  A estrutura desse padrão aplicada ao nosso projeto é a seguinte: a classe DiretorGabarito contém uma sequência de chamadas de métodos organizados em uma ordem específica para a construção do objeto Gabarito; a implementação desses métodos fica implementada na classe BuilderGabarito. Abaixo estão os trechos de código que exibem a implementação das mesmas.
+  
+  
+    public class DiretorGabarito {
+
+      public DiretorGabarito(){
+      }
+
+      public Gabarito builder(Usuario cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas) throws Exception{
+
+          Gabarito testeP = new Gabarito();
+          BuilderGabarito builder = new BuilderGabarito(cliente,perguntas,respostas);
+
+          /*adicionar a sequência de tarefas*/
+
+           //verifica se o cliente é cadastrado ou não
+          builder.VerificaUsuario();
+          //preenche as respostas do cliente
+          builder.preencheRespostas(perguntas);
+          //testeP.setListaRespostas(respostas);
+          //registra data do teste
+          builder.registraData();
+          //Preenche o objeto teste com os dados retornados pelos métodos anteriores
+          return builder.montarTestePersonalidade(testeP);
+      }
+   }
+  
+  
+  
+    public class BuilderGabarito{
+      private Usuario cliente;
+      private HashMap<String,Integer> respostas;
+      private HashMap<String,String> perguntas;
+      private Date dataHora;
+
+
+      public BuilderGabarito(Usuario cliente, HashMap<String, String> perguntas, HashMap<String,Integer> respostas){
+          this.cliente = cliente;
+          this.perguntas = perguntas;
+          this.respostas = respostas;
+
+      }
+
+      /*tarefas*/
+
+      public void preencheRespostas(HashMap<String, String> perguntas){
+          ControleTela tela = new ControleTela();
+          this.respostas = tela.realizaTeste(perguntas);/*armazena na variável declarada do builder*/
+      }
+
+      /*registra hora e data da realização do teste*/
+      public void registraData(){
+          Date date = new Date();
+          this.dataHora = date;
+          //DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+          //this.dateFormat.format(date);
+      }
+
+      //adiciona todos os atributos preenchidos em teste e guarda os valores no banco
+      public Gabarito montarTestePersonalidade(Gabarito testeP)
+
+          testeP.setIdTeste(IdGeneratorSingleton.getInstance().getNextSerial());
+          testeP.setCliente(this.cliente);
+          testeP.setListaRespostas(this.respostas);
+          testeP.setDataHora(this.dataHora);
+
+          return testeP;
+
+      }
+
+  }
+
+
+## 5.2 Padrão Singleton <br>
+
+## 5.3 Padrão Peso Mosca <br>
+
+## 5.4 Padrão Observer <br>
+
+## 5.5 Padrão DAO <br>
+
+  Para a parte do projeto que engloba a persistência dos dados optamos por utilizar o padrão Data Access Object (DAO), que encapsula os mecanismos de acesso a dados, fornecendo uma interface genérica com métodos de acesso que podem ser alterados, independentemente do código que utiliza os dados. 
+  
+  
+  
+  Em nosso projeto a interface genérica corresponde a GenericDAO e as classes que implementam a mesma são representadas com a junção do nome da classe com o sufixo 'DAOimpl'. A seguir há dois trechos de código que representam a interface e uma das classes implementadoras da mesma, a UsuarioDAOImpl.
+  
+    public interface GenericDAO<G> {
+        public List<G> getAll() throws SQLException, ClassNotFoundException;
+        public G getById(int id) throws SQLException, ClassNotFoundException;
+        public boolean insert(G obj) throws SQLException, ClassNotFoundException;
+        public void update(G obj) throws SQLException, ClassNotFoundException;
+        public void delete(G obj) throws SQLException, ClassNotFoundException;
+
+    }
+  
+  
+    public class UsuarioDAOImpl<G> extends Conector implements GenericDAO<G> {
+
+      private static final String SELECT = "SELECT * FROM usuario ";
+      private static final String SELECT_LOGIN = "SELECT * FROM cliente where email = ? and senha = ?;";
+      private static final String INSERT = "INSERT INTO usuario (id_usuario,nome,cpf,"
+              + "email,senha,dataNascimento) VALUES(?,?,?,?,?,?);";
+      private static final String DELETE = "DELETE FROM cliente WHERE id_cliente = ?;";
+      private static final String UPDATE = "UPDATE usuario SET (nome,cpf,"
+            + "email,senha,dataNascimento) = (?,?,?,?,?) WHERE id_usuario = ?;";
+
+      private static final String ID_USUARIO = "id_usuario";
+      private static final String NOME = "nome";
+      private static final String EMAIL = "email";
+      private static final String SENHA = "senha";
+      private static final String CPF = "cpf";
+      private static final String ORDER = "ORDER BY id_usuario ASC";
+      private static final String DATA = "dataNascimento";
+
+      @Override
+      public boolean insert(G obj) throws SQLException, ClassNotFoundException {
+          boolean stat = false;
+          try (Connection connection = this.openConnection();
+                  PreparedStatement statement = connection.prepareStatement(INSERT);) {
+
+              statement.setInt(1, this.getNextId(SELECT + ORDER, ID_USUARIO));
+              statement.setString(2, ((Usuario) obj).getNome());
+              statement.setString(3, ((Usuario) obj).getCpf());
+              statement.setString(4, ((Usuario) obj).getEmail());
+              statement.setString(5, ((Usuario) obj).getSenha());
+              statement.setString(6,((Usuario) obj).getDataNascimento());
+
+              stat = statement.execute(); 
+          } finally {
+              this.closeConnection(con);
+          }
+          return stat;
+
+      }
+  
+  
