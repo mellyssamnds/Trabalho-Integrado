@@ -33,7 +33,45 @@ public class UsuarioDAOImpl<G> extends Conector implements GenericDAO<G> {
     private static final String DATA = "dataNascimento";
 
 //    List<Usuario> pessoas = new ArrayList<>();
-   
+    private static Usuario pessoa = new Usuario();
+    
+    public boolean selectLogin(String email, String senha) throws SQLException, ClassNotFoundException {
+        boolean result = false;
+
+        try (Connection connection = this.openConnection();
+                PreparedStatement statement = connection.prepareStatement(SELECT_LOGIN);) {
+            statement.setString(1, email);
+            statement.setString(2, senha);
+            try (ResultSet resultadoConsulta = statement.executeQuery()) {
+            	result = resultadoConsulta.next();
+            	if(result) {
+	            	pessoa.setNome(resultadoConsulta.getString(NOME));
+	                pessoa.setEmail(resultadoConsulta.getString(EMAIL));
+	                pessoa.setCpf((String) resultadoConsulta.getString(CPF));
+	                pessoa.setSenha(resultadoConsulta.getString(SENHA));
+	                pessoa.setId(resultadoConsulta.getInt(ID_USUARIO));
+	                pessoa.setNascimento(resultadoConsulta.getDate(DATA));
+            	}
+            }
+        } finally {
+            this.closeConnection(con);
+        }
+        return result;
+    }
+    
+    public static Usuario recuperarUsuario(String email, String senha) throws ClassNotFoundException, SQLException {
+		UsuarioDAOImpl<Usuario> dao = new UsuarioDAOImpl<>();
+    	if (pessoa == null) {
+			dao.selectLogin(email, senha);
+		}
+    	return pessoa;
+    }
+    /**
+     *
+     * @param obj
+     * @return @throws SQLException
+     * @throws ClassNotFoundException
+     */
 
     @Override
     public boolean insert(G obj) throws SQLException, ClassNotFoundException {
