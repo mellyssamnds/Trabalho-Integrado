@@ -5,17 +5,34 @@ com os Professores Felipe Franchiane, Moisés Omena e Rodrigo Calhau em 2019/1
 
 ## 1. Componentes <br>
 - Anne Caroline Silva: carolinesilva4@hotmail.com
-- Ivana Amorim Julião
-- Jennifer Gonçalves do Amaral
-- Mellyssa Stephanny de Jesus Mendes
+- Ivana Amorim Julião: ivanaajuliao@gmail.com
+- Jennifer Gonçalves do Amaral: jennifergamaral@gmail.com
+- Mellyssa Stephanny de Jesus Mendes: mellyssah.mendes@gmail.com
 
 ## 2. Aquecimento <br>
 
+A seguir apresentamos o Canvas de Aquecimento, com imagens individuais de cada integrante do grupo
+
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/Canvas%20de%20Aquecimento/aquecimentoAnne.jpeg)
+
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/Canvas%20de%20Aquecimento/aquecimentoIvana.jpeg)
+
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/Canvas%20de%20Aquecimento/aquecimentoJennifer.jpeg)
+
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/Canvas%20de%20Aquecimento/aquecimentoMellyssa.jpeg)
+
+
 ## 3. Diário de Bordo <br>
+
+O diário de bordo do grupo pode ser encontrado no seguinte link: [diário](https://docs.google.com/document/d/1C98fEnTXOouiWER455Rvhz5wbpx5Zy4iSblsz3gf3Fg/edit?usp=sharing)
 
 ## 4. Gerência de Requisitos <br>
 
 ### 4.1 Project Model Canvas <br>
+
+Nosso canvas de projeto é apresentação a seguir
+
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/canvas.png)
 
 ### 4.2 GitHub do Projeto <br>
 
