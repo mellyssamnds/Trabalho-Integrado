@@ -1,4 +1,4 @@
-﻿# Trabalho Integrado das disciplinas de Programação Orientada a Objetos II, Banco de Dados e Projeto de Sistemas
+﻿# Trabalho Integrado das disciplinas de Programação Orientada a Objetos II, Banco de Dados II e Projeto de Sistemas
 com os Professores Felipe Frechiani, Moisés Omena e Rodrigo Calhau em 2019/1 
 
 # Tema: Delphos - Inteligência Emocional <br>
