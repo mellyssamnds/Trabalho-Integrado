@@ -133,21 +133,33 @@ RN06 | O sistema deve efetuar o controle de itens recomendados, realizando cria�
 
 #### 4.5.1 Subsistemas <br>
 
+https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG
+
 #### 4.5.2 Modelagem de Casos de Uso <br>
+
+https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG
 
 #### 4.5.3 Modelo Conceitual <br>
 
+O diagrama de classes de análise da solução proposta é mostrado na seguinte imagem
+
+https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG
+
+A seguir, é mostrado o diagrama de classes de projeto
+
+https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG
+
 ## 5. Padrões de Projeto <br>
 
-## 5.1 Padrão Builder <br>
+### 5.1 Padrão Builder <br>
 
-  Um objeto do tipo Gabarito reúne informações acerca da data em que foi gerado, as respostas que foram dadas pelo usuário em questão e as perguntas que serão exibidas, percebe-se então que são construção não é tão simples e depende de outras classes. Para organizar melhor a ordem dessa construção foi utilizado o padrão de criação Builder.
+Um objeto do tipo Gabarito reúne informações acerca da data em que foi gerado, as respostas que foram dadas pelo usuário em questão e as perguntas que serão exibidas, percebe-se então que são construção não é tão simples e depende de outras classes. Para organizar melhor a ordem dessa construção foi utilizado o padrão de criação Builder.
 
 ![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/DiagramaBuilder.PNG)
 
 Diagrama de classes - Recorte com implementação do padrão builder.
 
-  A estrutura desse padrão aplicada ao nosso projeto é a seguinte: a classe DiretorGabarito contém uma sequência de chamadas de métodos organizados em uma ordem específica para a construção do objeto Gabarito; a implementação desses métodos fica implementada na classe BuilderGabarito. Abaixo estão os trechos de código que exibem a implementação das mesmas.
+A estrutura desse padrão aplicada ao nosso projeto é a seguinte: a classe DiretorGabarito contém uma sequência de chamadas de métodos organizados em uma ordem específica para a construção do objeto Gabarito; a implementação desses métodos fica implementada na classe BuilderGabarito. Abaixo estão os trechos de código que exibem a implementação das mesmas.
   
   
     public class DiretorGabarito {
@@ -220,32 +232,37 @@ Diagrama de classes - Recorte com implementação do padrão builder.
   }
 
 
-## 5.2 Padrão Singleton <br>
+### 5.2 Padrão Singleton <br>
 
 O Padrão Singleton tem como definição garantir que uma classe tenha apenas uma instância de si mesma e que forneça um ponto global de acesso a ela. Ou seja, uma classe gerencia a própria instância dela além de evitar que qualquer outra classe crie uma instância dela. Para criar a instancia tem-se que passar pela classe obrigatoriamente, nenhuma outra classe pode instanciar ela. O Padrão Singleton também oferece um ponto global de acesso a sua instância. A própria classe sempre vai oferecer a própria instância dela e caso não tenha ainda uma instância, então ela mesma cria e retorna essa nova instância criada.
 
 Nosso trabalho implementa o singleton para criar instâncias únicas de id para o teste de personalidade no gabaritoBuilder. A figura a seguir é uma amostra do diagrama de classes onde o padrão está representado.
 
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoSingleton.PNG)
 
-## 5.3 Padrão Peso Mosca <br>
+
+### 5.3 Padrão Peso Mosca <br>
 
 O padrão Flyweight cria uma estrutura de compartilhamento de objetos pequenos. É um padrão de projeto de software apropriado quando vários objetos devem ser manipulados em memória sendo que muitos deles possuem informações repetidas. Dado que o recurso de memória é limitado, é possível segregar a informação repetida em um objeto adicional que atenda as características de imutabilidade e comparabilidade (que consiga ser comparado com outro objeto para determinar se ambos carregam a mesma informação).
 
 No projeto, utilizamos o peso mosca para criar as perguntad do teste de personalidade. Ao todo são 50 perguntas que são instanciadas apenas uma vez no processo. A figura a seguir é uma amostra do diagrama de classes onde o padrão está representado.
 
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG)
 
-## 5.4 Padrão Observer <br>
 
-## 5.5 Padrão Data Access Object <br>
+### 5.4 Padrão Observer <br>
 
-  Para a parte do projeto que engloba a persistência dos dados optamos por utilizar o padrão Data Access Object (DAO), que encapsula os mecanismos de acesso a dados, fornecendo uma interface genérica com métodos de acesso que podem ser alterados, independentemente do código que utiliza os dados. 
+
+### 5.5 Padrão Data Access Object <br>
+
+Para a parte do projeto que engloba a persistência dos dados optamos por utilizar o padrão Data Access Object (DAO), que encapsula os mecanismos de acesso a dados, fornecendo uma interface genérica com métodos de acesso que podem ser alterados, independentemente do código que utiliza os dados. 
   
   
-  ![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/diagramaDAO.PNG)
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/diagramaDAO.PNG)
   
-  Diagrama de classes - Recorte com implementação do Padrão DAO.
+Diagrama de classes - Recorte com implementação do Padrão DAO.
   
-  Em nosso projeto a interface genérica corresponde a GenericDAO e as classes que implementam a mesma são representadas com a junção do nome da classe com o sufixo 'DAOimpl'. A seguir há dois trechos de código que representam a interface e uma das classes implementadoras da mesma, a UsuarioDAOImpl.
+Em nosso projeto a interface genérica corresponde a GenericDAO e as classes que implementam a mesma são representadas com a junção do nome da classe com o sufixo 'DAOimpl'. A seguir há dois trechos de código que representam a interface e uma das classes implementadoras da mesma, a UsuarioDAOImpl.
   
     public interface GenericDAO<G> {
         public List<G> getAll() throws SQLException, ClassNotFoundException;
