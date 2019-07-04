@@ -15,7 +15,7 @@ import java.util.HashMap;
  *
  * @author Jennifer
  */
-public abstract class TestePersonalidadeDAOImpl extends Conector implements GenericDAO {
+public abstract class GabaritoDAOImpl extends Conector implements GenericDAO {
     
     /*Strings dos scripts SQL*/
     private static final String INSERT = "INSERT INTO gabarito (dataHora,EXT1,EXT2,EXT3,"
