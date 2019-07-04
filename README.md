@@ -133,11 +133,11 @@ RN06 | O sistema deve efetuar o controle de itens recomendados, realizando cria√
 
 #### 4.5.1 Subsistemas <br>
 
-https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/diagramaSubsistemas.PNG)
 
 #### 4.5.2 Modelagem de Casos de Uso <br>
 
-https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/diagramaCasosDeUso.PNG)
 
 #### 4.5.3 Modelo Conceitual <br>
 
