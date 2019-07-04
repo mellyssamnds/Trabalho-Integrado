@@ -1,5 +1,5 @@
 ﻿# Trabalho Integrado das disciplinas de Programação Orientada a Objetos II, Banco de Dados e Projeto de Sistemas
-com os Professores Felipe Frechiane, Moisés Omena e Rodrigo Calhau em 2019/1 
+com os Professores Felipe Frechiani, Moisés Omena e Rodrigo Calhau em 2019/1 
 
 # Tema: Delphos - Inteligência Emocional <br>
 
@@ -245,12 +245,20 @@ Nosso trabalho implementa o singleton para criar instâncias únicas de id para 
 
 O padrão Flyweight cria uma estrutura de compartilhamento de objetos pequenos. É um padrão de projeto de software apropriado quando vários objetos devem ser manipulados em memória sendo que muitos deles possuem informações repetidas. Dado que o recurso de memória é limitado, é possível segregar a informação repetida em um objeto adicional que atenda as características de imutabilidade e comparabilidade (que consiga ser comparado com outro objeto para determinar se ambos carregam a mesma informação).
 
-No projeto, utilizamos o peso mosca para criar as perguntad do teste de personalidade. Ao todo são 50 perguntas que são instanciadas apenas uma vez no processo. A figura a seguir é uma amostra do diagrama de classes onde o padrão está representado.
+No projeto, utilizamos o peso mosca para criar as perguntas do teste de personalidade. Ao todo são 50 perguntas que são instanciadas apenas uma vez no processo. A figura a seguir é uma amostra do diagrama de classes onde o padrão está representado.
 
 ![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG)
 
 
 ### 5.4 Padrão Observer <br>
+
+O Observer é um padrão de projeto de software que define uma dependência um-para-muitos entre objetos de modo que quando um objeto muda o estado, todos seus dependentes são notificados e atualizados automaticamente. Permite que objetos interessados sejam avisados da mudança de estado ou outros eventos ocorrendo num outro objeto.
+
+No projeto, o objetivo era utilizar o observer para notificar o usuário. As notificações envolvem: 
+- Adição de Materiais Informativos;
+- Prazo para fazer o teste (visto que o teste só pode ser feito a cada 6 meses, é enviado um lembrete quando o prazo estiver próximo. - Outro ponto é que pode ser massante para o usuário responder as 50 perguntas de uma só vez. Pensando nisso, o usuário tem a liberdade de nao concluir o teste, mas o sistema o notifica que ele tem um prazo para terminar de responder, se não será necessário refazer o teste);
+- Lembretes diários das tarefas a serem realizadas, a fim de ficarem registradas no seu histórico de desempenho;
+
 
 
 ### 5.5 Padrão Data Access Object <br>
