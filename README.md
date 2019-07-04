@@ -143,11 +143,11 @@ RN06 | O sistema deve efetuar o controle de itens recomendados, realizando cria�
 
 O diagrama de classes de análise da solução proposta é mostrado na seguinte imagem
 
-https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/diagrama%20de%20classe%20v2%20-%20Delphos.png)
 
 A seguir, é mostrado o diagrama de classes de projeto
 
-https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/pedacoPesoMosca.PNG
+![Alt text](https://github.com/mellyssaStephanny/Trabalho-Integrado/blob/master/imagens/diagramaClassesProjeto.png)
 
 ## 5. Padrões de Projeto <br>
 
